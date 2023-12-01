@@ -15,6 +15,7 @@ const About = () => {
 
   return (
     <motion.div
+      id="about-section"
       className="full main-about"
       style={{ background: aboutBgColor, color: lightTextColor }}
     >
@@ -81,6 +82,7 @@ const About = () => {
           </h4>
         </div>
       </div>
+      <div className="100pxbox" style={{ height: "100px" }}></div>
     </motion.div>
   );
 };

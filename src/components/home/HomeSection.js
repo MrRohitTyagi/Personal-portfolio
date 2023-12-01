@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import "./home.css";
 import { ConfigContext } from "App";
+import { scrollToSection } from "utils";
 
 const HomeSection = () => {
   const config = useContext(ConfigContext);
   return (
     <motion.div
+      id="home-section"
       style={{ background: config.homeBgColor }}
       className="home-container flex-box"
     >
@@ -23,7 +25,10 @@ const HomeSection = () => {
           </div>
         </div>
         <div className="single-line"> i'm a MERN stack developer</div>
-        <div class="w-m-w-button page-link">
+        <div
+          class="w-m-w-button page-link"
+          onClick={() => scrollToSection("about-section")}
+        >
           View my work <i class="fa-solid fa-arrow-right"></i>
         </div>
       </motion.h1>

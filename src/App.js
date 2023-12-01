@@ -6,6 +6,7 @@ import Navbar from "components/navbar/Navbar";
 
 import profile from "assets/my.png";
 import Skills from "components/skills/Skills";
+import Projects from "components/projects/Projects";
 const ConfigContext = createContext();
 
 const config = {
@@ -28,6 +29,7 @@ const App = () => {
         <HomeSection />
         <About />
         <Skills />
+        <Projects />
       </motion.div>
     </ConfigContext.Provider>
   );

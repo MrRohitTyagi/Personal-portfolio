@@ -1,0 +1,35 @@
+.main-project {
+  padding: 0px 60px;
+  height: fit-content;
+  min-height: fit-content;
+}
+.section-heading-project {
+  font-size: 40px;
+  line-height: 24px;
+  font-style: bold;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.border-bottom-text-project {
+  position: relative;
+  padding-bottom: 15px;
+  /* border-bottom: 4px solid grey; */
+}
+.border-bottom-text-project::after {
+  content: " ";
+  z-index: 10;
+  position: absolute;
+  top: 120%;
+  left: 18%;
+  width: 100px !important;
+  border-radius: 5px;
+  height: 5px;
+  background-color: grey;
+}
+.projects-container {
+}

@@ -17,9 +17,9 @@ import { ConfigContext } from "App";
 
 const Skills = () => {
   const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
-
   return (
     <motion.div
+      id="skills-section"
       className="full main-skills"
       style={{ background: skillsBgColor, color: lightTextColor }}
     >
@@ -30,7 +30,7 @@ const Skills = () => {
       <section className="skills-container">
         <div className="skills-section">
           <div className="skill-panel">
-            <h2 className='skill-header'>Frontend Skills</h2>
+            <h2 className="skill-header">Frontend Skills</h2>
             <div className="skill-icon-container">
               <div className="skill-box">
                 <img src={react} alt="node" className="skill" />
@@ -59,7 +59,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-panel">
-            <h2 className='skill-header'>Backend Skills </h2>
+            <h2 className="skill-header">Backend Skills </h2>
             <div className="skill-icon-container">
               <div className="skill-box">
                 <img src={nodejs} alt="node" className="skill" />
@@ -76,7 +76,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-panel">
-            <h2 className='skill-header'>Programming Languages</h2>
+            <h2 className="skill-header">Programming Languages</h2>
             <div className="skill-icon-container">
               <div className="skill-box">
                 <img src={python} alt="node" className="skill" />
