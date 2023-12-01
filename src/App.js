@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext } from "react";
+import { motion } from "framer-motion";
+import HomeSection from "./components/home/HomeSection";
+import About from "components/about/About";
+import Navbar from "components/navbar/Navbar";
 
-function App() {
+import profile from "assets/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr-removebg-preview (1).png";
+import Skills from "components/skills/Skills";
+const ConfigContext = createContext();
+
+const config = {
+  homeBgColor: "#252934",
+  aboutBgColor: "#393B3C",
+  navbarBgColor: "#373E48",
+  skillsColor: "#23c3c9",
+  skillsBgColor: "#393B3C",
+  lightTextColor: "rgb(228, 223, 214)",
+  userProfile: profile,
+  // userProfile:
+  //   "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigContext.Provider value={config}>
+      <motion.div className="main-container">
+        <Navbar />
+        <HomeSection />
+        <About />
+        <Skills />
+      </motion.div>
+    </ConfigContext.Provider>
   );
-}
-
+};
+export { ConfigContext };
 export default App;

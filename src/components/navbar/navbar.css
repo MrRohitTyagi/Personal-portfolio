@@ -1,0 +1,18 @@
+.navbar-container {
+
+  min-height: 50px;
+  max-height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.nav-ele-box {
+  min-height: 50px;
+  max-height: 50px;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+.nav-item {
+  font-weight: 300;
+}
