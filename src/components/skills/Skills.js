@@ -1,18 +1,19 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { ReactLogo } from "@styled-icons/fa-brands/ReactLogo";
-import { LogoNodejs } from "@styled-icons/ionicons-solid/LogoNodejs";
-import { Javascript } from "@styled-icons/fluentui-system-regular/Javascript";
-import { Redux } from "@styled-icons/simple-icons/Redux";
-import { Html5 } from "@styled-icons/boxicons-logos/Html5";
-import { Css3 } from "@styled-icons/boxicons-logos/Css3";
-import { Bootstrap } from "@styled-icons/boxicons-logos/Bootstrap";
-import { Mongodb } from "@styled-icons/simple-icons/Mongodb";
-import { Python } from "@styled-icons/fa-brands/Python";
+
+import nodejs from "assets/nodejs.svg";
+import bootstrap from "assets/bootstrap.svg";
+import css from "assets/css.svg";
+import html from "assets/html.svg";
+import javascript from "assets/javascript.svg";
+import mongo from "assets/mongo.svg";
+import python from "assets/python.svg";
+import react from "assets/react.svg";
+import redux from "assets/redux.svg";
+import express from "assets/express-js.svg";
 
 import "./skills.css";
 import { ConfigContext } from "App";
-import { Express } from "styled-icons/simple-icons";
 
 const Skills = () => {
   const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
@@ -32,27 +33,27 @@ const Skills = () => {
             <h2>Frontend Skills</h2>
             <div className="skill-icon-container">
               <div className="skill-box">
-                <ReactLogo className="skill" />
+                <img src={react} alt="node" className="skill" />
                 <h4 className="skill-text">React</h4>
               </div>
               <div className="skill-box">
-                <Javascript className="skill" />
+                <img src={javascript} alt="node" className="skill" />
                 <h4 className="skill-text">Javascript</h4>
               </div>
               <div className="skill-box">
-                <Redux className="skill" />
+                <img src={redux} alt="node" className="skill" />
                 <h4 className="skill-text">Redux</h4>
               </div>
               <div className="skill-box">
-                <Css3 className="skill" />
+                <img src={css} alt="node" className="skill" />
                 <h4 className="skill-text">Css</h4>
               </div>
               <div className="skill-box">
-                <Html5 className="skill" />
+                <img src={html} alt="node" className="skill" />
                 <h4 className="skill-text">HTML</h4>
               </div>
               <div className="skill-box">
-                <Bootstrap className="skill" />
+                <img src={bootstrap} alt="node" className="skill" />
                 <h4 className="skill-text">Bootstrap</h4>
               </div>
             </div>
@@ -61,15 +62,15 @@ const Skills = () => {
             <h2>Backend Skills </h2>
             <div className="skill-icon-container">
               <div className="skill-box">
-                <LogoNodejs className="skill" />
+                <img src={nodejs} alt="node" className="skill" />
                 <h4 className="skill-text">Node js</h4>
               </div>
               <div className="skill-box">
-                <Express className="skill" />
+                <img src={express} alt="node" className="skill" />
                 <h4 className="skill-text">Express Js</h4>
               </div>
               <div className="skill-box">
-                <Mongodb className="skill" />
+                <img src={mongo} alt="node" className="skill" />
                 <h4 className="skill-text">Mongo Db</h4>
               </div>
             </div>
@@ -78,7 +79,7 @@ const Skills = () => {
             <h2>Programming Languages</h2>
             <div className="skill-icon-container">
               <div className="skill-box">
-                <Python className="skill" />
+                <img src={python} alt="node" className="skill" />
                 <h4 className="skill-text">Python</h4>
               </div>
             </div>

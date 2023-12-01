@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { Speed } from "@styled-icons/material-twotone/Speed";
-import { Devices } from "@styled-icons/material-outlined/Devices";
-import { Lightbulb } from "@styled-icons/fa-regular/Lightbulb";
-import { Rocket } from "@styled-icons/ionicons-outline/Rocket";
+
+import rocket from "assets/rocket.svg";
+import devices from "assets/devices.svg";
+import bulb from "assets/bulb.svg";
+import speed from "assets/speed.svg";
 
 import "./about.css";
 import { ConfigContext } from "App";
@@ -38,7 +39,7 @@ const About = () => {
         <div className="feature-box">
           <div class="hexagon-container">
             <div class="hexagon">
-              <Speed size="50px" className="icon" />
+              <img src={speed} alt="" className="icon" />
             </div>
           </div>
           <h3 className="">Fast</h3>
@@ -49,7 +50,7 @@ const About = () => {
         <div className="feature-box">
           <div class="hexagon-container">
             <div class="hexagon">
-              <Devices size="50px" className="icon" />
+              <img src={devices} alt="" className="icon" />
             </div>
           </div>
           <h3 className="">Responsive</h3>
@@ -60,7 +61,7 @@ const About = () => {
         <div className="feature-box">
           <div class="hexagon-container">
             <div class="hexagon">
-              <Lightbulb size="50px" className="icon" />
+              <img src={bulb} alt="" className="icon" />
             </div>
           </div>
           <h3 className="">Intuitive</h3>
@@ -71,7 +72,7 @@ const About = () => {
         <div className="feature-box">
           <div class="hexagon-container">
             <div class="hexagon">
-              <Rocket size="50px" className="icon" />
+              <img src={rocket} alt="" className="icon" />
             </div>
           </div>
           <h3 className="">Dynamic</h3>
