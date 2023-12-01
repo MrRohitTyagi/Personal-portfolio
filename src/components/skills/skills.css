@@ -98,3 +98,49 @@
   padding-left: 20px;
   font-size: 19px;
 }
+
+@media (max-width: 1250px) {
+  .divider {
+    display: none;
+  }
+  .skills-container {
+    flex-direction: column;
+  }
+  .main-skills {
+    padding: 0px 10px;
+  }
+  .skill-box {
+    gap: 4px;
+    margin: 5px;
+    padding: 10px;
+    min-width: 100px;
+  }
+  .skill {
+    height: 40px;
+    width: 40px;
+  }
+  .skills-section {
+    width: 100%;
+    align-items: center;
+  }
+  .skill-icon-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .skill-header {
+    text-align: center;
+  }
+  .exp-section {
+    width: 100%;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  li {
+    font-size: 14px;
+  }
+}

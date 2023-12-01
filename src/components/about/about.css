@@ -2,6 +2,9 @@
   padding: 0px 60px;
   min-height: fit-content;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 .section-heading {
   font-size: 40px;
   line-height: 24px;

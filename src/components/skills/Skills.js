@@ -30,7 +30,7 @@ const Skills = () => {
       <section className="skills-container">
         <div className="skills-section">
           <div className="skill-panel">
-            <h2>Frontend Skills</h2>
+            <h2 className='skill-header'>Frontend Skills</h2>
             <div className="skill-icon-container">
               <div className="skill-box">
                 <img src={react} alt="node" className="skill" />
@@ -59,7 +59,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-panel">
-            <h2>Backend Skills </h2>
+            <h2 className='skill-header'>Backend Skills </h2>
             <div className="skill-icon-container">
               <div className="skill-box">
                 <img src={nodejs} alt="node" className="skill" />
@@ -76,7 +76,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="skill-panel">
-            <h2>Programming Languages</h2>
+            <h2 className='skill-header'>Programming Languages</h2>
             <div className="skill-icon-container">
               <div className="skill-box">
                 <img src={python} alt="node" className="skill" />

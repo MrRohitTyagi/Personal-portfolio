@@ -4,7 +4,7 @@ import HomeSection from "./components/home/HomeSection";
 import About from "components/about/About";
 import Navbar from "components/navbar/Navbar";
 
-import profile from "assets/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr-removebg-preview (1).png";
+import profile from "assets/my.png";
 import Skills from "components/skills/Skills";
 const ConfigContext = createContext();
 
