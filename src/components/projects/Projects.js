@@ -6,7 +6,7 @@ import { ConfigContext } from "App";
 const Projects = () => {
   const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
   return (
-    <motion.div
+    <div
       id="projects-section"
       className="full main-project"
       style={{ background: skillsBgColor, color: lightTextColor }}
@@ -15,7 +15,7 @@ const Projects = () => {
         <div className="border-bottom-text-project">Projects</div>
       </div>
       <section className="projects-container">TO be continued</section>
-    </motion.div>
+    </div>
   );
 };
 

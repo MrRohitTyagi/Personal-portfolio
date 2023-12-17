@@ -9,6 +9,8 @@ const Navbar = () => {
 
   return (
     <motion.div
+      animate={{ y: 0 }}
+      initial={{ y:-50 }}
       style={{
         background: navbarBgColor,
         borderBottom: `2px solid ${skillsColor} `,
@@ -16,36 +18,36 @@ const Navbar = () => {
       className="navbar-container white"
     >
       <div className="flex-row nav-ele-box">
-        <motion.h3
+        <h3
           onClick={() => scrollToSection("home-section")}
           className="nav-item"
         >
           Home
-        </motion.h3>
-        <motion.h3
+        </h3>
+        <h3
           onClick={() => scrollToSection("about-section")}
           className="nav-item"
         >
           About
-        </motion.h3>
-        <motion.h3
+        </h3>
+        <h3
           onClick={() => scrollToSection("skills-section")}
           className="nav-item"
         >
           Skills
-        </motion.h3>
-        <motion.h3
+        </h3>
+        <h3
           onClick={() => scrollToSection("projects-section")}
           className="nav-item"
         >
           Projects
-        </motion.h3>
-        <motion.h3
+        </h3>
+        <h3
           onClick={() => scrollToSection("contact-section")}
           className="nav-item"
         >
           Contact
-        </motion.h3>
+        </h3>
       </div>
     </motion.div>
   );

@@ -11,6 +11,7 @@ import python from "assets/python.svg";
 import react from "assets/react.svg";
 import redux from "assets/redux.svg";
 import express from "assets/express-js.svg";
+import framer from "assets/framer.svg";
 
 import "./skills.css";
 import { ConfigContext } from "App";
@@ -18,7 +19,7 @@ import { ConfigContext } from "App";
 const Skills = () => {
   const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
   return (
-    <motion.div
+    <div
       id="skills-section"
       className="full main-skills"
       style={{ background: skillsBgColor, color: lightTextColor }}
@@ -55,6 +56,10 @@ const Skills = () => {
               <div className="skill-box">
                 <img src={bootstrap} alt="node" className="skill" />
                 <h4 className="skill-text">Bootstrap</h4>
+              </div>
+              <div className="skill-box">
+                <img src={framer} alt="node" className="skill" />
+                <h4 className="skill-text">Framer motion</h4>
               </div>
             </div>
           </div>
@@ -135,7 +140,7 @@ const Skills = () => {
           </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 };
 

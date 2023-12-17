@@ -24,13 +24,13 @@ const config = {
 const App = () => {
   return (
     <ConfigContext.Provider value={config}>
-      <motion.div className="main-container">
+      <div className="main-container">
         <Navbar />
         <HomeSection />
         <About />
         <Skills />
         <Projects />
-      </motion.div>
+      </div>
     </ConfigContext.Provider>
   );
 };

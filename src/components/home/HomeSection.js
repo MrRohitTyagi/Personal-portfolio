@@ -7,32 +7,36 @@ import { scrollToSection } from "utils";
 const HomeSection = () => {
   const config = useContext(ConfigContext);
   return (
-    <motion.div
+    <div
       id="home-section"
       style={{ background: config.homeBgColor }}
       className="home-container flex-box"
     >
-      <motion.h1
+      <motion.div
+        initial={{ scale: 0.2, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
         className="white home-text"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transiti={{ duration: 0.5 }}
       >
-        <div className="single-line">
+        <h1 className="single-line">
           Hello, I'm
-          <div className="gold" style={{ marginLeft: "5px" }}>
+          <span className="gold" style={{ marginLeft: "5px" }}>
             Rohit Tyagi.
-          </div>
-        </div>
-        <div className="single-line"> i'm a MERN stack developer</div>
-        <div
-          class="w-m-w-button page-link"
+          </span>
+        </h1>
+        <h1 className="single-line"> i'm a MERN stack developer</h1>
+        <motion.h1
+          whileHover={{
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            boxShadow: "0px 0px 8px rgb(255,255,255)",
+          }}
+          transition={{duration:0.2}}
+         className="w-m-w-button page-link"
           onClick={() => scrollToSection("about-section")}
         >
-          View my work <i class="fa-solid fa-arrow-right"></i>
-        </div>
-      </motion.h1>
-    </motion.div>
+          View my work <i className="fa-solid fa-arrow-right"></i>
+        </motion.h1>
+      </motion.div>
+    </div>
   );
 };
 

@@ -23,6 +23,7 @@ body {
 .single-line {
   display: flex;
   flex-direction: row;
+  margin: 5px !important;
 }
 .full-w {
   width: 100%;

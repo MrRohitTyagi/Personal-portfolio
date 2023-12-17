@@ -1,21 +1,21 @@
 .home-container {
   height: 100vh;
 }
-.flex-box {
+.flex-box {          
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-
-.home-text {
-  font-size: 5vw;
+.home-text {              
+  /* font-size: 5vw; */
   letter-spacing: 2px;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 .w-m-w-button {
+  all:unset ;
   color-scheme: dark !important;
   text-size-adjust: 100%;
   text-align: center;
@@ -25,7 +25,7 @@
   box-sizing: inherit;
   cursor: pointer;
   display: inline-block;
-  font-size: 13pt;
+  font-size: 13px;
   transition: all 0.5s;
   border-color: rgb(82, 86, 89);
   margin-bottom: 53px;
@@ -46,9 +46,9 @@
 
 @media (min-width: 1250px) {
   .home-text {
-    font-size: 3vw;
+    /* font-size: 3vw; */
   }
   .w-m-w-button {
-    font-size: 1vw;
+    /* font-size: 1vw; */
   }
 }
