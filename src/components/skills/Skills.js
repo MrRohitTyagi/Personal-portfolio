@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
-import { motion } from "framer-motion";
+import React, { useContext, useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import nodejs from "assets/nodejs.svg";
 import bootstrap from "assets/bootstrap.svg";
@@ -16,81 +17,172 @@ import framer from "assets/framer.svg";
 import "./skills.css";
 import { ConfigContext } from "App";
 
+const skillsHeadingVarient = {
+  hidden: { x: "-1000px" },
+  visible: { x: 0 },
+};
+const skillsVarient = {
+  hidden: { scale: 0 },
+  visible: { scale: 1 },
+};
+
 const Skills = () => {
   const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
+  const skillScontrol = useAnimation();
+  const skillOnlyScontrol = useAnimation();
+  const { ref: skillsHeadingRef, inView: skillsHeadingInView } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: skillsOnlyRef, inView: skillsOnlyInView } = useInView({
+    triggerOnce: true,
+  });
+
+  useEffect(() => {
+    if (skillsHeadingInView) {
+      skillScontrol.start("visible");
+    }
+    if (skillsOnlyInView) {
+      skillOnlyScontrol.start("visible");
+    }
+    return () => {
+      skillScontrol.stop();
+    };
+  }, [skillOnlyScontrol, skillScontrol, skillsHeadingInView, skillsOnlyInView]);
+
   return (
     <div
+      ref={skillsHeadingRef}
       id="skills-section"
       className="full main-skills"
       style={{ background: skillsBgColor, color: lightTextColor }}
     >
-      <div className="section-heading-skills full-w align-c">
+      <motion.div
+        variants={skillsHeadingVarient}
+        animate={skillScontrol}
+        initial="hidden"
+        className="section-heading-skills full-w align-c"
+      >
         <div className="border-bottom-text-skills">Skills & Experience</div>
-      </div>
+      </motion.div>
 
       <section className="skills-container">
         <div className="skills-section">
           <div className="skill-panel">
             <h2 className="skill-header">Frontend Skills</h2>
             <div className="skill-icon-container">
-              <div className="skill-box">
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={react} alt="node" className="skill" />
                 <h4 className="skill-text">React</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={javascript} alt="node" className="skill" />
                 <h4 className="skill-text">Javascript</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={redux} alt="node" className="skill" />
                 <h4 className="skill-text">Redux</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={css} alt="node" className="skill" />
                 <h4 className="skill-text">Css</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={html} alt="node" className="skill" />
                 <h4 className="skill-text">HTML</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={bootstrap} alt="node" className="skill" />
                 <h4 className="skill-text">Bootstrap</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={framer} alt="node" className="skill" />
                 <h4 className="skill-text">Framer motion</h4>
-              </div>
+              </motion.div>
             </div>
           </div>
-          <div className="skill-panel">
+          <div ref={skillsOnlyRef} className="skill-panel">
             <h2 className="skill-header">Backend Skills </h2>
             <div className="skill-icon-container">
-              <div className="skill-box">
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={nodejs} alt="node" className="skill" />
                 <h4 className="skill-text">Node js</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={express} alt="node" className="skill" />
                 <h4 className="skill-text">Express Js</h4>
-              </div>
-              <div className="skill-box">
+              </motion.div>
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={mongo} alt="node" className="skill" />
                 <h4 className="skill-text">Mongo Db</h4>
-              </div>
+              </motion.div>
             </div>
           </div>
           <div className="skill-panel">
             <h2 className="skill-header">Programming Languages</h2>
             <div className="skill-icon-container">
-              <div className="skill-box">
+              <motion.div
+                variants={skillsVarient}
+                animate={skillOnlyScontrol}
+                initial="hidden"
+                className="skill-box"
+              >
                 <img src={python} alt="node" className="skill" />
                 <h4 className="skill-text">Python</h4>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
-        <div className="divider"></div>
+        <div className="divider" />
         <div className="exp-section">
           <div className="flex-col company-section">
             <h1 className="position">
