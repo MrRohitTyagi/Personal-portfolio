@@ -32,4 +32,48 @@
   background-color: grey;
 }
 .projects-container {
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.project {
+  overflow: hidden;
+  position: relative;
+  img {
+    border-radius: 5px;
+  }
+  border-radius: 5px;
+  border: 1px solid;
+  gap: 10px;
+  height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.project-image {
+  transition: all 200ms;
+}
+.img-banner {
+  border-radius: 5px;
+  position: absolute;
+  background-color: rgb(48, 48, 48);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 1250px) {
+  .project {
+    position: relative;
+    gap: 10px;
+    height: 200px;
+    width: 300px;
+  }
 }

@@ -1,5 +1,4 @@
 import React, { createContext } from "react";
-import { motion } from "framer-motion";
 import HomeSection from "./components/home/HomeSection";
 import About from "components/about/About";
 import Navbar from "components/navbar/Navbar";

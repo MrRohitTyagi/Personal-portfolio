@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { animate, motion, inView, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 // assets
@@ -10,6 +10,10 @@ import speed from "assets/speed.svg";
 
 import "./about.css";
 import { ConfigContext } from "App";
+import InsagramSvg from "assets/insagram.svg";
+import LinkedlnSvg from "assets/Linkedln.svg";
+import GithubSvg from "assets/Github.svg";
+import WhatsappSvg from "assets/Whatsapp.svg";
 
 const featureVariants = {
   hidden: { filter: "blur(10px)" },
@@ -63,6 +67,7 @@ const About = () => {
       </div>
       <section id="intro" className="full-w intro-section">
         <img src={userProfile} alt="" className="profile-pic" />
+
         <div className="details">
           <h3 className="text-c description">
             MERN Stack Developer with 1 year of experience in designing and
@@ -73,6 +78,12 @@ const About = () => {
             the latest technologies. Passionate about delivering cutting-edge
             solutions and continuous learning.
           </h3>
+          <div className="socials">
+            <InsagramSvg />
+            <LinkedlnSvg />
+            <GithubSvg />
+            <WhatsappSvg />
+          </div>
         </div>
       </section>
       <div className="feature-container flex-row">
@@ -137,7 +148,7 @@ const About = () => {
           </div>
           <h3 className="">Dynamic</h3>
           <h4 className="text-c">
-            Websites don't have to be static, I love making pages come to life.
+            I love bringing websites to life with dynamic, animated pages.
           </h4>
         </div>
       </div>
