@@ -10,6 +10,7 @@ body {
 }
 
 .main-container {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }

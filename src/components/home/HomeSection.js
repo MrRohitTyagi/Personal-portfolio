@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import "./home.css";
-import { ConfigContext } from "App";
+import { ConfigContext, ThemeContext } from "App";
 import { scrollToSection } from "utils";
 
 const HomeSection = () => {
-  const config = useContext(ConfigContext);
+  const theme = useContext(ThemeContext);
+  const { aboutMe } = useContext(ConfigContext);
   return (
     <div
       id="home-section"
-      style={{ background: config.homeBgColor }}
+      style={{ background: theme.homeBgColor }}
       className="home-container flex-box"
     >
       <motion.div
@@ -20,17 +21,17 @@ const HomeSection = () => {
         <h1 className="single-line">
           Hello, I'm
           <span className="gold" style={{ marginLeft: "5px" }}>
-            Rohit Tyagi.
+            {aboutMe?.name}
           </span>
         </h1>
-        <h1 className="single-line"> i'm a MERN stack developer</h1>
+        <h1 className="single-line"> {aboutMe?.tagLine}</h1>
         <motion.h1
           whileHover={{
             textShadow: "0px 0px 8px rgb(255,255,255)",
             boxShadow: "0px 0px 8px rgb(255,255,255)",
           }}
-          transition={{duration:0.2}}
-         className="w-m-w-button page-link"
+          transition={{ duration: 0.2 }}
+          className="w-m-w-button page-link"
           onClick={() => scrollToSection("about-section")}
         >
           View my work <i className="fa-solid fa-arrow-right"></i>

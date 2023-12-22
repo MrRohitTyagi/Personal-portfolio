@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
-import { ConfigContext } from "App";
+import { ThemeContext } from "App";
 import useIntersectionObserver from "utils/useIntersectionObserver";
 
 import "./projects.css";
@@ -14,7 +14,7 @@ const headingVariants = {
 };
 const Projects = () => {
   const { control, ref } = useIntersectionObserver();
-  const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
+  const { skillsBgColor, lightTextColor } = useContext(ThemeContext);
   return (
     <div
       ref={ref}

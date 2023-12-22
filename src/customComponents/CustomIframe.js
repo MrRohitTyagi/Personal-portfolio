@@ -1,6 +1,6 @@
 import React, { useCallback, useContext, useState } from "react";
 import { motion } from "framer-motion";
-import { ConfigContext } from "App";
+import { ThemeContext } from "App";
 
 const CustomIframe = ({ src, image }) => {
   const [layer, setLayer] = useState(false);
@@ -75,7 +75,7 @@ const CustomIframe = ({ src, image }) => {
   );
 };
 export const Layer = ({ closeLayer, children, desc, sub, heading }) => {
-  const { aboutBgColor } = useContext(ConfigContext);
+  const { aboutBgColor } = useContext(ThemeContext);
   return (
     <div className="layer">
       <motion.div

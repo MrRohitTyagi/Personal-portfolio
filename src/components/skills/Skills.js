@@ -2,32 +2,32 @@ import React, { useContext, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import nodejs from "assets/nodejs.svg";
-import bootstrap from "assets/bootstrap.svg";
-import css from "assets/css.svg";
-import html from "assets/html.svg";
-import javascript from "assets/javascript.svg";
-import mongo from "assets/mongo.svg";
-import python from "assets/python.svg";
-import react from "assets/react.svg";
-import redux from "assets/redux.svg";
-import express from "assets/express-js.svg";
-import framer from "assets/framer.svg";
-
 import "./skills.css";
-import { ConfigContext } from "App";
+import { ConfigContext, ThemeContext } from "App";
 
 const skillsHeadingVarient = {
   hidden: { x: "-1000px" },
   visible: { x: 0 },
 };
 const skillsVarient = {
-  hidden: { scale: 0 },
-  visible: { scale: 1 },
+  hidden: {
+    scale: [0],
+    rotate: 0,
+  },
+  visible: {
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut",
+    },
+    rotate: [0, 2, 0],
+    scale: [0, 1.01, 1],
+  },
 };
 
 const Skills = () => {
-  const { skillsBgColor, lightTextColor } = useContext(ConfigContext);
+  const { skillsBgColor, lightTextColor } = useContext(ThemeContext);
+  const { skillsSection, experienceSection } = useContext(ConfigContext);
+
   const skillScontrol = useAnimation();
   const skillOnlyScontrol = useAnimation();
   const { ref: skillsHeadingRef, inView: skillsHeadingInView } = useInView({
@@ -66,170 +66,52 @@ const Skills = () => {
       </motion.div>
 
       <section className="skills-container">
-        <div className="skills-section">
-          <div className="skill-panel">
-            <h2 className="skill-header">Frontend Skills</h2>
-            <div className="skill-icon-container">
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={react} alt="node" className="skill" />
-                <h4 className="skill-text">React</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={javascript} alt="node" className="skill" />
-                <h4 className="skill-text">Javascript</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={redux} alt="node" className="skill" />
-                <h4 className="skill-text">Redux</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={css} alt="node" className="skill" />
-                <h4 className="skill-text">Css</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={html} alt="node" className="skill" />
-                <h4 className="skill-text">HTML</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={bootstrap} alt="node" className="skill" />
-                <h4 className="skill-text">Bootstrap</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={framer} alt="node" className="skill" />
-                <h4 className="skill-text">Framer motion</h4>
-              </motion.div>
-            </div>
-          </div>
-          <div ref={skillsOnlyRef} className="skill-panel">
-            <h2 className="skill-header">Backend Skills </h2>
-            <div className="skill-icon-container">
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={nodejs} alt="node" className="skill" />
-                <h4 className="skill-text">Node js</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={express} alt="node" className="skill" />
-                <h4 className="skill-text">Express Js</h4>
-              </motion.div>
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={mongo} alt="node" className="skill" />
-                <h4 className="skill-text">Mongo Db</h4>
-              </motion.div>
-            </div>
-          </div>
-          <div className="skill-panel">
-            <h2 className="skill-header">Programming Languages</h2>
-            <div className="skill-icon-container">
-              <motion.div
-                variants={skillsVarient}
-                animate={skillOnlyScontrol}
-                initial="hidden"
-                className="skill-box"
-              >
-                <img src={python} alt="node" className="skill" />
-                <h4 className="skill-text">Python</h4>
-              </motion.div>
-            </div>
-          </div>
+        <div ref={skillsOnlyRef} className="skills-section">
+          {skillsSection?.map((section) => {
+            return (
+              <div className="skill-panel" key={section.heading}>
+                <h2 className="skill-header">{section.heading}</h2>
+                <div className="skill-icon-container">
+                  {section?.skills?.map((skill) => {
+                    return (
+                      <motion.div
+                        key={skill.name}
+                        variants={skillsVarient}
+                        animate={skillOnlyScontrol}
+                        initial="hidden"
+                        className="skill-box"
+                      >
+                        <img src={skill.image} alt="node" className="skill" />
+                        <h4 className="skill-text">{skill.name}</h4>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="divider" />
         <div className="exp-section">
-          <div className="flex-col company-section">
-            <h1 className="position">
-              Associate Software Engineer
-              <span className="date">{"10/2022 – Present"}</span>
-            </h1>
-            <h2 className="company-name">
-              Thoughts2Binary Consulting & Solutions
-            </h2>
-            <ul className="role-in-company">
-              <li>
-                Spearheaded the development of the core product, contributing to
-                its enhanced functionality and user experience.
-              </li>
-              <li>
-                Collaborated closely with UX/UI designers to transform design
-                mockups and wireframes into pixelperfect web interfaces,
-                utilizing React.js and other frontend libraries.
-              </li>
-              <li>
-                Established seamless communication between frontend and backend
-                systems, ensuring data consistency and optimal user experiences.
-              </li>
-              <li>
-                Utilized a tech stack including React.js, Redux, git, npm,
-                Javascript, grommet, and Amazon Web Services (AWS).
-              </li>
-            </ul>
-          </div>
-          <div className="height-20px-box" />
-          <div className="flex-col company-section">
-            <h1 className="position">
-              Web Developer Intern
-              <span className="date">{"11/2021 – 05/2022"}</span>
-            </h1>
-            <h2 className="company-name">Pepcoding Education Pvt Ltd.</h2>
-            <ul className="role-in-company">
-              <li>
-                Assisted in troubleshooting, debugging code, and enhancing
-                website functionality.
-              </li>
-              <li>
-                Gained practical experience with HTML, CSS, JavaScript, Node.js
-                and data structures.
-              </li>
-            </ul>
-          </div>
+          {experienceSection?.map((exp) => {
+            return (
+              <>
+                <div className="flex-col company-section">
+                  <h1 className="position">
+                    {exp.position}
+                    <span className="date">{exp.date}</span>
+                  </h1>
+                  <h2 className="company-name">{exp.companyName}</h2>
+                  <ul className="role-in-company">
+                    {exp.role.map((role) => {
+                      return <li>{role}</li>;
+                    })}
+                  </ul>
+                </div>
+                <div className="height-20px-box" />
+              </>
+            );
+          })}
         </div>
       </section>
     </div>

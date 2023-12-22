@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import HomeSection from "./components/home/HomeSection";
 import About from "components/about/About";
 import Navbar from "components/navbar/Navbar";
@@ -6,9 +6,11 @@ import Navbar from "components/navbar/Navbar";
 import profile from "assets/my.png";
 import Skills from "components/skills/Skills";
 import Projects from "components/projects/Projects";
+import { BECONFIG } from "beconfig";
+const ThemeContext = createContext();
 const ConfigContext = createContext();
 
-const config = {
+const theme = {
   homeBgColor: "#252934",
   aboutBgColor: "#393B3C",
   navbarBgColor: "#373E48",
@@ -21,17 +23,26 @@ const config = {
 };
 
 const App = () => {
+  const [config, setConfig] = useState({});
+  useEffect(() => {
+    (function fetchConfig() {
+      setConfig(BECONFIG);
+    })();
+  });
   return (
-    <ConfigContext.Provider value={config}>
-      <div className="main-container">
-        <Navbar />
-        <HomeSection />
-        <About />
-        <Skills />
-        <Projects />
-      </div>
-    </ConfigContext.Provider>
+    <ThemeContext.Provider value={theme}>
+      <ConfigContext.Provider value={config}>
+        <div className="main-container">
+          <Navbar />
+          <HomeSection />
+          <About />
+          <Skills />
+          <Projects />
+        </div>
+      </ConfigContext.Provider>
+    </ThemeContext.Provider>
   );
 };
+export { ThemeContext };
 export { ConfigContext };
 export default App;

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { ConfigContext } from "App";
+import { ThemeContext } from "App";
 import "./navbar.css";
 import { scrollToSection } from "utils";
 
 const Navbar = () => {
-  const { navbarBgColor, skillsColor } = useContext(ConfigContext);
+  const { navbarBgColor, skillsColor } = useContext(ThemeContext);
 
   return (
     <motion.div
