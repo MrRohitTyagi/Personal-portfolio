@@ -2,7 +2,11 @@ import React, { useCallback, useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { ThemeContext } from "App";
 
-const CustomIframe = ({ src, image }) => {
+const projectvarients = {
+  hidden: {},
+  initial: {},
+};
+const CustomIframe = ({ src, image, desc, name,tech }) => {
   const [layer, setLayer] = useState(false);
   const [showBaner, setshowBaner] = useState(false);
   const closeLayer = useCallback((e) => {
@@ -10,7 +14,12 @@ const CustomIframe = ({ src, image }) => {
     setLayer(false);
   }, []);
   return (
-    <div>
+    <motion.div
+      // variants={projectvarients}
+      animate={{ y: 0 }}
+      initial={{ y: 100 }}
+      transition={{ duration: 0.5 }}
+    >
       <div
         className="project"
         onMouseEnter={() => setshowBaner(true)}
@@ -34,8 +43,8 @@ const CustomIframe = ({ src, image }) => {
               animate={{ y: "0px", opacity: 1 }}
               style={{ alignItems: "center", textAlign: "center" }}
             >
-              <h1>GraniteStack</h1>
-              <h4 style={{ color: "#23c3c9" }}>React js</h4>
+              <h1>{name}</h1>
+              <h4 style={{ color: "#23c3c9" }}>{tech}</h4>
             </motion.div>
             <div style={{ minHeight: "50px" }}></div>
             <motion.button
@@ -55,13 +64,7 @@ const CustomIframe = ({ src, image }) => {
         )}
       </div>
       {layer && (
-        <Layer
-          closeLayer={closeLayer}
-          heading={"GraniteStack"}
-          desc={
-            "GraniteStack enables effortless creation of Minimum Viable Products (MVPs) without code, enabling a low-cost approach to validate ideas while preparing for scale."
-          }
-        >
+        <Layer closeLayer={closeLayer} heading={"GraniteStack"} desc={desc}>
           <iframe
             height="100%"
             width="100%"
@@ -71,7 +74,7 @@ const CustomIframe = ({ src, image }) => {
           />
         </Layer>
       )}
-    </div>
+    </motion.div>
   );
 };
 export const Layer = ({ closeLayer, children, desc, sub, heading }) => {

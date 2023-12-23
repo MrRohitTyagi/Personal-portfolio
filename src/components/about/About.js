@@ -79,6 +79,7 @@ const About = () => {
             <div className="feature-box" key={feature.heading}>
               <div className="hexagon-container">
                 <motion.div
+                  transition={{ duration: 0.5 }}
                   animate={controlsForFeatures}
                   initial={"hidden"}
                   variants={featureVariants}

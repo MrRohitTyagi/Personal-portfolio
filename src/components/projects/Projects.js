@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 
-import { ThemeContext } from "App";
+import { ConfigContext, ThemeContext } from "App";
 import useIntersectionObserver from "utils/useIntersectionObserver";
 
 import "./projects.css";
@@ -15,6 +15,7 @@ const headingVariants = {
 const Projects = () => {
   const { control, ref } = useIntersectionObserver();
   const { skillsBgColor, lightTextColor } = useContext(ThemeContext);
+  const { projectsSection } = useContext(ConfigContext);
   return (
     <div
       ref={ref}
@@ -33,7 +34,17 @@ const Projects = () => {
         </motion.div>
       </div>
       <section className="projects-container">
-        <CustomIframe src={"https://granitestack.com/"} image={granitestack} />
+        {projectsSection?.map((project) => {
+          return (
+            <CustomIframe
+              src={project.src}
+              image={project.image}
+              desc={project.description}
+              name={project.title}
+              tech={project.tech}
+            />
+          );
+        })}
       </section>
     </div>
   );

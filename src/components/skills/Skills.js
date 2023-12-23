@@ -95,7 +95,7 @@ const Skills = () => {
         <div className="exp-section">
           {experienceSection?.map((exp) => {
             return (
-              <>
+              <div key={exp.position}>
                 <div className="flex-col company-section">
                   <h1 className="position">
                     {exp.position}
@@ -103,13 +103,13 @@ const Skills = () => {
                   </h1>
                   <h2 className="company-name">{exp.companyName}</h2>
                   <ul className="role-in-company">
-                    {exp.role.map((role) => {
-                      return <li>{role}</li>;
+                    {exp.role.map((role, i) => {
+                      return <li key={i}>{role}</li>;
                     })}
                   </ul>
                 </div>
                 <div className="height-20px-box" />
-              </>
+              </div>
             );
           })}
         </div>

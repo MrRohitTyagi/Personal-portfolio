@@ -16,6 +16,9 @@ import redux from "assets/redux.svg";
 import express from "assets/express-js.svg";
 import framer from "assets/framer.svg";
 
+import granitestack from "assets/granitestaclk.png";
+import t2c from "assets/t2c.png";
+
 export const BECONFIG = {
   featureBox: [
     {
@@ -41,7 +44,6 @@ export const BECONFIG = {
         " I love bringing websites to life with dynamic, animated pages.",
     },
   ],
-
   aboutMe: {
     tagLine: `i'm a MERN stack developer`,
     name: "Rohit Tyagi.",
@@ -109,5 +111,20 @@ export const BECONFIG = {
       ],
     },
   ],
-  projectsSection:[]
+  projectsSection: [
+    {
+      src: "https://granitestack.com/",
+      image: granitestack,
+      description: `GraniteStack enables effortless creation of Minimum Viable Products (MVPs) without code, enabling a low-cost approach to validate ideas while preparing for scale.`,
+      title: `GraniteStack`,
+      tech: "React js",
+    },
+    {
+      src: "https://thoughts2-cart-com.vercel.app/",
+      image: t2c,
+      description: `Developed an intuitive e-commerce site with user authentication, an admin portal for product management, Stripe integration for secure payments, and an invoicing system with email delivery. Proficient in React, HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB. Achieved a seamless shopping experience with a focus on efficient product management.`,
+      title: `Thoughts2Cart.com`,
+      tech: "React js / Node / Express / Mongo DB",
+    },
+  ],
 };
