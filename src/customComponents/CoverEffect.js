@@ -105,7 +105,7 @@ const CoverEffect = ({ children }) => {
             links: {
               opacity: 0.5,
             },
-            radius: 60,
+            radius: 20,
           },
           grab: {
             distance: 100,
@@ -142,7 +142,7 @@ const CoverEffect = ({ children }) => {
           },
           slow: {
             factor: 3,
-            radius: 200,
+            radius: 10,
           },
           light: {
             area: {
@@ -154,7 +154,7 @@ const CoverEffect = ({ children }) => {
                   value: "#000000",
                 },
               },
-              radius: 1000,
+              radius: 100,
             },
             shadow: {
               color: {

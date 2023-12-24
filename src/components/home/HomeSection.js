@@ -1,13 +1,11 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import "./home.css";
-import { ConfigContext, ThemeContext } from "App";
+import { ConfigContext } from "App";
 import { scrollToSection } from "utils";
 import TypingEffect from "customComponents/typingeffect";
-import CoverEffect from "customComponents/CoverEffect";
 
 const HomeSection = () => {
-  const theme = useContext(ThemeContext);
   const { aboutMe } = useContext(ConfigContext);
   return (
     <motion.div id="home-section" className="home-container flex-box">

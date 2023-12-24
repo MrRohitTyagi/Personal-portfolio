@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./typingeffect.css"; // Import your CSS file for styling
 
-const TypingEffect = ({ text }) => {
+const TypingEffect = ({ text, time = 100 }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [isDone, setisDone] = useState(false);
 
@@ -16,12 +16,12 @@ const TypingEffect = ({ text }) => {
         setisDone(true);
         clearInterval(typingInterval);
       }
-    }, 100); // Adjust the interval based on your preference
+    }, time); // Adjust the interval based on your preference
 
     return () => {
       clearInterval(typingInterval);
     };
-  }, [text]);
+  }, [text, time]);
 
   return (
     <div className="typing-effect">

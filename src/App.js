@@ -8,6 +8,7 @@ import Skills from "components/skills/Skills";
 import Projects from "components/projects/Projects";
 import { BECONFIG } from "beconfig";
 import CoverEffect from "customComponents/CoverEffect";
+import Contact from "components/contact/contact";
 const ThemeContext = createContext();
 const ConfigContext = createContext();
 
@@ -41,6 +42,7 @@ const App = () => {
           <About />
           <Skills />
           <Projects />
+          <Contact />
         </div>
       </ConfigContext.Provider>
     </ThemeContext.Provider>

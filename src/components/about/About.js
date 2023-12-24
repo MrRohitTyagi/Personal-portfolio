@@ -4,10 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import "./about.css";
 import { ConfigContext, ThemeContext } from "App";
-import InsagramSvg from "assets/insagram.svg";
-import LinkedlnSvg from "assets/Linkedln.svg";
-import GithubSvg from "assets/Github.svg";
-import WhatsappSvg from "assets/Whatsapp.svg";
+
 
 const featureVariants = {
   hidden: {
@@ -89,12 +86,6 @@ const About = () => {
 
               <div className="details">
                 <h3 className="text-c description">{aboutMe?.summery}</h3>
-                <div className="socials">
-                  <InsagramSvg />
-                  <LinkedlnSvg />
-                  <GithubSvg />
-                  <WhatsappSvg />
-                </div>
               </div>
             </motion.section>
 

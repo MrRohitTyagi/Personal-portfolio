@@ -21,6 +21,13 @@ body {
 .white {
   color: white;
 }
+.copy-write {
+  position: fixed;
+  top: 98%;
+  left: 0%;
+  font-size: 10px;
+  color: white;
+}
 .single-line {
   display: flex;
   flex-direction: row;

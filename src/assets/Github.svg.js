@@ -26,6 +26,7 @@ const GithubSvg = () => {
         ref={githubSvgRef}
       >
         <motion.path
+        fill='white'
           initial={"hidden"}
           variants={variants}
           animate={controll}
