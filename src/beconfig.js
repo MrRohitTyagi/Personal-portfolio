@@ -5,7 +5,7 @@ import speed from "assets/speed.svg";
 import profile from "assets/my.png";
 
 import nodejs from "assets/nodejs.svg";
-import bootstrap from "assets/bootstrap.svg";
+import materialUI from "assets/icons8-material-ui-800.svg";
 import css from "assets/css.svg";
 import html from "assets/html.svg";
 import javascript from "assets/javascript.svg";
@@ -74,8 +74,8 @@ export const BECONFIG = {
         { name: "Redux", image: redux },
         { name: "Css", image: css },
         { name: "Html", image: html },
-        { name: "Bootstrap", image: bootstrap },
-        { name: "Framer motion", image: framer },
+        { name: "Material", image: materialUI },
+        { name: "Framer", image: framer },
       ],
     },
     {

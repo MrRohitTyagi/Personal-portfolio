@@ -7,15 +7,16 @@ import profile from "assets/my.png";
 import Skills from "components/skills/Skills";
 import Projects from "components/projects/Projects";
 import { BECONFIG } from "beconfig";
+import CoverEffect from "customComponents/CoverEffect";
 const ThemeContext = createContext();
 const ConfigContext = createContext();
 
 const theme = {
   homeBgColor: "#252934",
-  aboutBgColor: "#393B3C",
-  navbarBgColor: "#373E48",
+  aboutBgColor: "#000000",
+  navbarBgColor: "#000000",
   skillsColor: "#23c3c9",
-  skillsBgColor: "#393B3C",
+  skillsBgColor: "#000000",
   lightTextColor: "rgb(228, 223, 214)",
   userProfile: profile,
   // userProfile:
@@ -34,7 +35,9 @@ const App = () => {
       <ConfigContext.Provider value={config}>
         <div className="main-container">
           <Navbar />
-          <HomeSection />
+          <CoverEffect>
+            <HomeSection />
+          </CoverEffect>
           <About />
           <Skills />
           <Projects />

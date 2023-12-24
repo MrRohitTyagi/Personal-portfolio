@@ -1,13 +1,17 @@
 .home-container {
-  height: 100vh;
+  position: absolute;
+  /* height: 100vh; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.flex-box {          
+.flex-box {
   align-items: center;
   display: flex;
   justify-content: center;
   flex-direction: row;
 }
-.home-text {              
+.home-text {
   /* font-size: 5vw; */
   letter-spacing: 2px;
   align-items: center;
@@ -15,7 +19,7 @@
   flex-direction: column;
 }
 .w-m-w-button {
-  all:unset ;
+  all: unset;
   color-scheme: dark !important;
   text-size-adjust: 100%;
   text-align: center;

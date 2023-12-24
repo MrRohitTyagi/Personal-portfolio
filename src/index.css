@@ -107,6 +107,9 @@ i {
   display: flex;
   gap: 5px;
 }
+.no-wrap {
+  text-wrap: nowrap;
+}
 *::-webkit-scrollbar {
   display: none;
 }

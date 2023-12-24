@@ -57,7 +57,7 @@ const About = () => {
       controlsForFeatures.stop();
     };
   }, [controls, controlsForFeatures, featuresInView, inView]);
-  console.log(aboutInView);
+
   return (
     <motion.div>
       <motion.div
