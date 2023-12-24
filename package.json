@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -10,6 +10,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"

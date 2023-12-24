@@ -5,8 +5,7 @@ import { ConfigContext, ThemeContext } from "App";
 import useIntersectionObserver from "utils/useIntersectionObserver";
 
 import "./projects.css";
-import CustomIframe from "customComponents/CustomIframe";
-import granitestack from "assets/granitestaclk.png";
+import ImageCrosole from "customComponents/ImageCrosole";
 
 const headingVariants = {
   hidden: { x: "-1100px" },
@@ -36,9 +35,9 @@ const Projects = () => {
       <section className="projects-container">
         {projectsSection?.map((project) => {
           return (
-            <CustomIframe
+            <ImageCrosole
               src={project.src}
-              image={project.image}
+              images={project.images}
               desc={project.description}
               name={project.title}
               tech={project.tech}

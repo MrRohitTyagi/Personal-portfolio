@@ -73,7 +73,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <div className="feature-container flex-row">
+      <div className="feature-container flex-row" ref={featuresRef}>
         {featureBox?.map((feature) => {
           return (
             <div className="feature-box" key={feature.heading}>
@@ -89,9 +89,7 @@ const About = () => {
                 </motion.div>
               </div>
               <h3 className="">{feature.heading}</h3>
-              <h4 className="text-c" ref={featuresRef}>
-                {feature.description}
-              </h4>
+              <h4 className="text-c">{feature.description}</h4>
             </div>
           );
         })}

@@ -59,17 +59,15 @@ body {
 .modal-content {
   z-index: 11;
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   border: 1px solid #888;
   width: 600px;
-  height: 80%;
+  height: fit-content;
+  padding-bottom: 10px;
 }
-.model-iframe {
-  height: 70%;
-}
+
 .modal-footer {
   padding: 0 20px;
   height: 25%;
@@ -94,6 +92,7 @@ body {
 }
 i {
   cursor: pointer;
+  transition: all 300ms;
   &:hover {
     scale: 1.1;
   }
@@ -103,7 +102,10 @@ i {
 }
 .h20 {
   min-height: 20px;
-  max-height: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 5px;
 }
 *::-webkit-scrollbar {
   display: none;

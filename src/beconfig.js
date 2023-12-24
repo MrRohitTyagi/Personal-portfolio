@@ -16,8 +16,17 @@ import redux from "assets/redux.svg";
 import express from "assets/express-js.svg";
 import framer from "assets/framer.svg";
 
-import granitestack from "assets/granitestaclk.png";
-import t2c from "assets/t2c.png";
+import granitestack1 from "assets/granitestack/1111.png";
+import granitestack2 from "assets/granitestack/aipromter.png";
+import granitestack3 from "assets/granitestack/Screenshot 2023-12-24 052015.png";
+
+import t2c1 from "assets/t2c/t2c.png";
+import t2c2 from "assets/t2c/Screenshot 2023-12-24 051317.png";
+import t2c3 from "assets/t2c/t2c1.png";
+
+import img1 from "assets/traveloris/1.png";
+import img2 from "assets/traveloris/2.png";
+import img3 from "assets/traveloris/3.png";
 
 export const BECONFIG = {
   featureBox: [
@@ -114,14 +123,21 @@ export const BECONFIG = {
   projectsSection: [
     {
       src: "https://granitestack.com/",
-      image: granitestack,
+      images: [granitestack1, granitestack2, granitestack3],
       description: `GraniteStack enables effortless creation of Minimum Viable Products (MVPs) without code, enabling a low-cost approach to validate ideas while preparing for scale.`,
       title: `GraniteStack`,
       tech: "React js",
     },
     {
+      src: "https://www.traveloris.com/",
+      images: [img1, img2, img3],
+      description: `raveloris is the smartest way to plan your trip. Our attractions have been carefully selected with the help of local explorer. Simply select what you want to see and let traveloris build your personalised itinerary.`,
+      title: `Travel oris`,
+      tech: "React js",
+    },
+    {
       src: "https://thoughts2-cart-com.vercel.app/",
-      image: t2c,
+      images: [t2c1, t2c2, t2c3],
       description: `Developed an intuitive e-commerce site with user authentication, an admin portal for product management, Stripe integration for secure payments, and an invoicing system with email delivery. Proficient in React, HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB. Achieved a seamless shopping experience with a focus on efficient product management.`,
       title: `Thoughts2Cart.com`,
       tech: "React js / Node / Express / Mongo DB",

@@ -1,7 +1,7 @@
 .main-project {
   padding: 0px 60px;
   height: fit-content;
-  min-height: fit-content;
+  min-height: 100vh;
 }
 .section-heading-project {
   font-size: 40px;
@@ -43,9 +43,7 @@
 .project {
   overflow: hidden;
   position: relative;
-  img {
-    border-radius: 5px;
-  }
+
   border-radius: 5px;
   border: 1px solid;
   gap: 10px;
@@ -55,6 +53,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  img {
+    border-radius: 5px;
+  }
 }
 .project-image {
   transition: all 200ms;
@@ -69,6 +70,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.image-slider-cont {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  scroll-behavior: smooth;
+}
+.slider-button-right {
+  position: fixed;
+  top: 150px;
+  padding: 4px;
+  right: 0;
+}
+.slider-button-left {
+  position: fixed;
+  top: 150px;
+  padding: 4px;
+  left: 0;
 }
 @media (max-width: 1250px) {
   .project {

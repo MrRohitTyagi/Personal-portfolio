@@ -1,6 +1,6 @@
 .main-about {
   padding: 0px 60px;
-  min-height: fit-content;
+  min-height: 100vh;
 }
 html::-webkit-scrollbar {
   display: none;

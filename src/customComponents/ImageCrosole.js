@@ -1,12 +1,10 @@
 import React, { useCallback, useContext, useState } from "react";
 import { motion } from "framer-motion";
 import { ThemeContext } from "App";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
-const projectvarients = {
-  hidden: {},
-  initial: {},
-};
-const CustomIframe = ({ src, image, desc, name,tech }) => {
+const ImageCrosole = ({ src, images, desc, name, tech }) => {
   const [layer, setLayer] = useState(false);
   const [showBaner, setshowBaner] = useState(false);
   const closeLayer = useCallback((e) => {
@@ -27,7 +25,7 @@ const CustomIframe = ({ src, image, desc, name,tech }) => {
       >
         <img
           className="project-image"
-          src={image}
+          src={images?.[0]}
           alt="img"
           height="100%"
           width="100%"
@@ -64,16 +62,21 @@ const CustomIframe = ({ src, image, desc, name,tech }) => {
         )}
       </div>
       {layer && (
-        <Layer closeLayer={closeLayer} heading={"GraniteStack"} desc={desc}>
-          <iframe
-            height="100%"
-            width="100%"
-            title="gstack"
-            src={src}
-            frameborder="0"
-          />
+        <Layer closeLayer={closeLayer} heading={name} desc={desc}>
+          <ImgSlider images={images} />
         </Layer>
       )}
+    </motion.div>
+  );
+};
+const ImgSlider = ({ images }) => {
+  return (
+    <motion.div className="image-slider-cont">
+      <Carousel>
+        {images.map((i, ind) => {
+          return <img src={i} key={ind} alt="img" />;
+        })}
+      </Carousel>
     </motion.div>
   );
 };
@@ -82,8 +85,8 @@ export const Layer = ({ closeLayer, children, desc, sub, heading }) => {
   return (
     <div className="layer">
       <motion.div
-        animate={{ height: "80%" }}
-        initial={{ height: 0 }}
+        animate={{ top: "50%" }}
+        initial={{ top: "-100%" }}
         className="modal-content"
         style={{ background: aboutBgColor }}
       >
@@ -114,4 +117,4 @@ export const Layer = ({ closeLayer, children, desc, sub, heading }) => {
   );
 };
 
-export default CustomIframe;
+export default ImageCrosole;
