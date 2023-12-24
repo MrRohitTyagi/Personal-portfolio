@@ -3,25 +3,27 @@ import { motion } from "framer-motion";
 import "./home.css";
 import { ConfigContext, ThemeContext } from "App";
 import { scrollToSection } from "utils";
+import TypingEffect from "customComponents/typingeffect";
 
 const HomeSection = () => {
   const theme = useContext(ThemeContext);
   const { aboutMe } = useContext(ConfigContext);
   return (
-    <div
+    <motion.div
       id="home-section"
       style={{ background: theme.homeBgColor }}
       className="home-container flex-box"
     >
       <motion.div
-        initial={{ scale: 0.2, opacity: 0 }}
+        transition={{ duration: 1,type:'spring' }}
         animate={{ scale: 1, opacity: 1 }}
+        initial={{ scale: 0.2, opacity: 0 }}
         className="white home-text"
       >
         <h1 className="single-line">
           Hello, I'm
           <span className="gold" style={{ marginLeft: "5px" }}>
-            {aboutMe?.name}
+            <TypingEffect text={aboutMe?.name} />
           </span>
         </h1>
         <h1 className="single-line"> {aboutMe?.tagLine}</h1>
@@ -34,10 +36,10 @@ const HomeSection = () => {
           className="w-m-w-button page-link"
           onClick={() => scrollToSection("about-section")}
         >
-          View my work <i className="fa-solid fa-arrow-right"></i>
+          About me <i className="fa-solid fa-arrow-right"></i>
         </motion.h1>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -49,6 +49,9 @@ const Skills = () => {
     };
   }, [skillOnlyScontrol, skillScontrol, skillsHeadingInView, skillsOnlyInView]);
 
+  const { ref: skillsRef, inView: skillsInView } = useInView({
+    triggerOnce: true,
+  });
   return (
     <div
       ref={skillsHeadingRef}
@@ -62,58 +65,79 @@ const Skills = () => {
         initial="hidden"
         className="section-heading-skills full-w align-c"
       >
-        <div className="border-bottom-text-skills">Skills & Experience</div>
+        <div ref={skillsRef} className="border-bottom-text-skills">
+          Skills & Experience
+        </div>
       </motion.div>
 
-      <section className="skills-container">
-        <div ref={skillsOnlyRef} className="skills-section">
-          {skillsSection?.map((section) => {
-            return (
-              <div className="skill-panel" key={section.heading}>
-                <h2 className="skill-header">{section.heading}</h2>
-                <div className="skill-icon-container">
-                  {section?.skills?.map((skill) => {
-                    return (
-                      <motion.div
-                        key={skill.name}
-                        variants={skillsVarient}
-                        animate={skillOnlyScontrol}
-                        initial="hidden"
-                        className="skill-box"
-                      >
-                        <img src={skill.image} alt="node" className="skill" />
-                        <h4 className="skill-text">{skill.name}</h4>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-        <div className="divider" />
-        <div className="exp-section">
-          {experienceSection?.map((exp) => {
-            return (
-              <div key={exp.position}>
-                <div className="flex-col company-section">
-                  <h1 className="position">
-                    {exp.position}
-                    <span className="date">{exp.date}</span>
-                  </h1>
-                  <h2 className="company-name">{exp.companyName}</h2>
-                  <ul className="role-in-company">
-                    {exp.role.map((role, i) => {
-                      return <li key={i}>{role}</li>;
+      {skillsInView && (
+        <section className="skills-container">
+          <motion.div
+            transition={{ duration: 2 }}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            ref={skillsOnlyRef}
+            className="skills-section"
+          >
+            {skillsSection?.map((section) => {
+              return (
+                <motion.div
+                  transition={{ duration: 2 }}
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  className="skill-panel"
+                  key={section.heading}
+                >
+                  <h2 className="skill-header">{section.heading}</h2>
+                  <div className="skill-icon-container">
+                    {section?.skills?.map((skill) => {
+                      return (
+                        <motion.div
+                          key={skill.name}
+                          variants={skillsVarient}
+                          animate={skillOnlyScontrol}
+                          initial="hidden"
+                          className="skill-box"
+                        >
+                          <img src={skill.image} alt="node" className="skill" />
+                          <h4 className="skill-text">{skill.name}</h4>
+                        </motion.div>
+                      );
                     })}
-                  </ul>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+          <div className="divider" />
+          <motion.div
+            transition={{ duration: 2 }}
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            className="exp-section"
+          >
+            {experienceSection?.map((exp) => {
+              return (
+                <div key={exp.position}>
+                  <div className="flex-col company-section">
+                    <h1 className="position">
+                      {exp.position}
+                      <span className="date">{exp.date}</span>
+                    </h1>
+                    <h2 className="company-name">{exp.companyName}</h2>
+                    <ul className="role-in-company">
+                      {exp.role.map((role, i) => {
+                        return <li key={i}>{role}</li>;
+                      })}
+                    </ul>
+                  </div>
+                  <div className="height-20px-box" />
                 </div>
-                <div className="height-20px-box" />
-              </div>
-            );
-          })}
-        </div>
-      </section>
+              );
+            })}
+          </motion.div>
+        </section>
+      )}
     </div>
   );
 };

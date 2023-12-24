@@ -1,7 +1,7 @@
 .main-skills {
   padding: 0px 60px;
   height: fit-content;
-  min-height: fit-content;
+  min-height: 100vh;
 }
 .section-heading-skills {
   font-size: 40px;

@@ -55,7 +55,7 @@ export const BECONFIG = {
   ],
   aboutMe: {
     tagLine: `i'm a MERN stack developer`,
-    name: "Rohit Tyagi.",
+    name: "Rohit Tyagi",
     summery: `MERN Stack Developer with 1 year of experience in designing and
     maintaining web applications. Proficient in MongoDB, Express.js,
     React.js, and Node.js. Skilled in front-end and back-end
@@ -131,7 +131,7 @@ export const BECONFIG = {
     {
       src: "https://www.traveloris.com/",
       images: [img1, img2, img3],
-      description: `raveloris is the smartest way to plan your trip. Our attractions have been carefully selected with the help of local explorer. Simply select what you want to see and let traveloris build your personalised itinerary.`,
+      description: `Traveloris is the smartest way to plan your trip. Our attractions have been carefully selected with the help of local explorer. Simply select what you want to see and let traveloris build your personalised itinerary.`,
       title: `Travel oris`,
       tech: "React js",
     },

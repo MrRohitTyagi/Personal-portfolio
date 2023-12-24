@@ -10,8 +10,18 @@ import GithubSvg from "assets/Github.svg";
 import WhatsappSvg from "assets/Whatsapp.svg";
 
 const featureVariants = {
-  hidden: { filter: "blur(10px)" },
-  visible: { filter: "blur(0px)" },
+  hidden: {
+    scale: 0,
+    rotate: 30,
+  },
+  visible: {
+    scale: 1,
+    rotate: [-20, 0],
+    transition: {
+      scale: { type: "spring", stiffness: 300, damping: 20 },
+      rotate: { duration: 0.5 },
+    },
+  },
 };
 const variants = {
   hidden: { x: "-1100px" },
@@ -31,6 +41,10 @@ const About = () => {
     triggerOnce: true,
   });
 
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    triggerOnce: true,
+  });
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -43,59 +57,79 @@ const About = () => {
       controlsForFeatures.stop();
     };
   }, [controls, controlsForFeatures, featuresInView, inView]);
-
+  console.log(aboutInView);
   return (
-    <div
-      id="about-section"
-      className="full main-about"
-      style={{ background: aboutBgColor, color: lightTextColor }}
-    >
-      <div className="section-heading full-w align-c" ref={ref}>
-        <motion.div
-          initial="hidden"
-          animate={controls}
-          variants={variants}
-          className="border-bottom-text"
-        >
-          About
-        </motion.div>
-      </div>
-      <section id="intro" className="full-w intro-section">
-        <img src={aboutMe?.profile} alt="" className="profile-pic" />
-
-        <div className="details">
-          <h3 className="text-c description">{aboutMe?.summery}</h3>
-          <div className="socials">
-            <InsagramSvg />
-            <LinkedlnSvg />
-            <GithubSvg />
-            <WhatsappSvg />
-          </div>
+    <motion.div>
+      <motion.div
+        id="about-section"
+        ref={aboutRef}
+        className="full main-about"
+        style={{ background: aboutBgColor, color: lightTextColor }}
+      >
+        <div className="section-heading full-w align-c" ref={ref}>
+          <motion.div
+            initial="hidden"
+            animate={controls}
+            variants={variants}
+            className="border-bottom-text"
+          >
+            About
+          </motion.div>
         </div>
-      </section>
-      <div className="feature-container flex-row" ref={featuresRef}>
-        {featureBox?.map((feature) => {
-          return (
-            <div className="feature-box" key={feature.heading}>
-              <div className="hexagon-container">
-                <motion.div
-                  transition={{ duration: 0.5 }}
-                  animate={controlsForFeatures}
-                  initial={"hidden"}
-                  variants={featureVariants}
-                  className="hexagon"
-                >
-                  <img src={feature.image} alt="img" className="icon" />
-                </motion.div>
+        {aboutInView && (
+          <>
+            <motion.section
+              transition={{ duration: 2 }}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              id="intro"
+              className="full-w intro-section"
+            >
+              <img src={aboutMe?.profile} alt="" className="profile-pic" />
+
+              <div className="details">
+                <h3 className="text-c description">{aboutMe?.summery}</h3>
+                <div className="socials">
+                  <InsagramSvg />
+                  <LinkedlnSvg />
+                  <GithubSvg />
+                  <WhatsappSvg />
+                </div>
               </div>
-              <h3 className="">{feature.heading}</h3>
-              <h4 className="text-c">{feature.description}</h4>
-            </div>
-          );
-        })}
-      </div>
-      <div className="100pxbox" style={{ height: "100px" }}></div>
-    </div>
+            </motion.section>
+
+            <motion.div
+              transition={{ duration: 2 }}
+              animate={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
+              className="feature-container flex-row"
+              ref={featuresRef}
+            >
+              {featureBox?.map((feature) => {
+                return (
+                  <div className="feature-box" key={feature.heading}>
+                    <div className="hexagon-container">
+                      <motion.div
+                        transition={{ duration: 0.5 }}
+                        animate={controlsForFeatures}
+                        initial={"hidden"}
+                        variants={featureVariants}
+                        className="hexagon"
+                      >
+                        <img src={feature.image} alt="img" className="icon" />
+                      </motion.div>
+                    </div>
+                    <h3 className="">{feature.heading}</h3>
+                    <h4 className="text-c">{feature.description}</h4>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </>
+        )}
+        <div className="100pxbox" style={{ height: "100px" }}></div>
+      </motion.div>
+    </motion.div>
   );
 };
 

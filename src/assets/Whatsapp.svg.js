@@ -15,7 +15,6 @@ const WhatsappSvg = () => {
   const control = useAnimation();
   useEffect(() => {
     if (whatsappSvgInView) {
-      console.log("whatsappSvgInView:", whatsappSvgInView);
       control.start("visible");
     }
   }, [control, whatsappSvgInView]);
