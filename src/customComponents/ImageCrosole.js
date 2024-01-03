@@ -62,7 +62,7 @@ const ImageCrosole = ({ src, images, desc, name, tech }) => {
         )}
       </div>
       {layer && (
-        <Layer closeLayer={closeLayer} heading={name} desc={desc}>
+        <Layer closeLayer={closeLayer} heading={name} desc={desc} src={src}>
           <ImgSlider images={images} />
         </Layer>
       )}
@@ -80,7 +80,7 @@ const ImgSlider = ({ images }) => {
     </motion.div>
   );
 };
-export const Layer = ({ closeLayer, children, desc, sub, heading }) => {
+export const Layer = ({ closeLayer, children, desc, sub, heading, src }) => {
   const { aboutBgColor } = useContext(ThemeContext);
   return (
     <div className="layer">
@@ -107,7 +107,9 @@ export const Layer = ({ closeLayer, children, desc, sub, heading }) => {
               transition={{ duration: 0.1 }}
               className="w-m-w-button page-link button-highlight"
             >
-              VISIT SITE
+              <a href={src} without rel="noreferrer" target="_blank">
+                VISIT SITE
+              </a>
             </motion.a>
             <i onClick={closeLayer} class="s13 fa-solid fa-xmark"></i>
           </div>

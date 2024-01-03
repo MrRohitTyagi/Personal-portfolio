@@ -28,6 +28,11 @@ import img1 from "assets/traveloris/1.png";
 import img2 from "assets/traveloris/2.png";
 import img3 from "assets/traveloris/3.png";
 
+import workspaces1 from "assets/workspaces/inbox.png";
+import workspaces2 from "assets/workspaces/login.png";
+import workspaces3 from "assets/workspaces/new mail.png";
+import workspaces4 from "assets/workspaces/open.png";
+
 export const BECONFIG = {
   featureBox: [
     {
@@ -127,6 +132,13 @@ export const BECONFIG = {
       description: `GraniteStack enables effortless creation of Minimum Viable Products (MVPs) without code, enabling a low-cost approach to validate ideas while preparing for scale.`,
       title: `GraniteStack`,
       tech: "React js",
+    },
+    {
+      src: "https://workspaces-orcin.vercel.app/inbox",
+      images: [workspaces2, workspaces1, workspaces3, workspaces4],
+      description: `Workspace is a sleek application that mirrors Gmail's efficiency, catering to seamless communication and collaboration. Developed with React, Node , Express & mongo DB, it offers an intuitive email system akin to Gmail. Its user-friendly design ensures easy email management makes Workspace a versatile platform for streamlined communication and productive teamwork.`,
+      title: `Workspaces`,
+      tech: "React js / Node / Express / Mongo DB      ",
     },
     {
       src: "https://www.traveloris.com/",
