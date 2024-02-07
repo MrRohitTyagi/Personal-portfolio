@@ -15,6 +15,8 @@ import react from "assets/react.svg";
 import redux from "assets/redux.svg";
 import express from "assets/express-js.svg";
 import framer from "assets/framer.svg";
+import tailwind from "assets/tailwind.svg";
+import jwt from "assets/jwt.svg";
 
 import granitestack1 from "assets/granitestack/1111.png";
 import granitestack2 from "assets/granitestack/aipromter.png";
@@ -81,6 +83,7 @@ export const BECONFIG = {
         { name: "Html", image: html },
         { name: "Material", image: materialUI },
         { name: "Framer", image: framer },
+        { name: "Tailwind", image: tailwind },
       ],
     },
     {
@@ -89,6 +92,7 @@ export const BECONFIG = {
         { name: "Node js", image: nodejs },
         { name: "Express js", image: express },
         { name: "Mongo DB", image: mongo },
+        { name: "JWT", image: jwt },
       ],
     },
     {
@@ -135,7 +139,7 @@ export const BECONFIG = {
     },
     {
       src: "https://workspaces-orcin.vercel.app/inbox",
-      images: [workspaces2, workspaces1, workspaces3, workspaces4],
+      images: [workspaces1, workspaces2, workspaces3, workspaces4],
       description: `Workspace is a sleek application that mirrors Gmail's efficiency, catering to seamless communication and collaboration. Developed with React, Node , Express & mongo DB, it offers an intuitive email system akin to Gmail. Its user-friendly design ensures easy email management makes Workspace a versatile platform for streamlined communication and productive teamwork.`,
       title: `Workspaces`,
       tech: "React js / Node / Express / Mongo DB      ",
