@@ -17,6 +17,8 @@ import express from "assets/express-js.svg";
 import framer from "assets/framer.svg";
 import tailwind from "assets/tailwind.svg";
 import jwt from "assets/jwt.svg";
+import postgres from "assets/postgres.svg";
+import sql from "assets/sql.svg";
 
 import granitestack1 from "assets/granitestack/1111.png";
 import granitestack2 from "assets/granitestack/aipromter.png";
@@ -93,6 +95,8 @@ export const BECONFIG = {
         { name: "Express js", image: express },
         { name: "Mongo DB", image: mongo },
         { name: "JWT", image: jwt },
+        { name: "PostgresQl", image: postgres },
+        { name: "SQL", image: sql },
       ],
     },
     {
