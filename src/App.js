@@ -9,6 +9,8 @@ import Projects from "components/projects/Projects";
 import { BECONFIG } from "beconfig";
 import CoverEffect from "customComponents/CoverEffect";
 import Contact from "components/contact/contact";
+import Chatbot from "components/chatbot/Chatbot";
+
 const ThemeContext = createContext();
 const ConfigContext = createContext();
 
@@ -43,6 +45,7 @@ const App = () => {
           <Skills />
           <Projects />
           <Contact />
+          <Chatbot />
         </div>
       </ConfigContext.Provider>
     </ThemeContext.Provider>
