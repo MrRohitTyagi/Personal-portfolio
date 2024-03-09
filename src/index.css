@@ -4,7 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  height: --webkit-fill-available;
+}
 body {
+  height: --webkit-fill-available;
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -119,11 +123,4 @@ i {
 }
 *::-webkit-scrollbar {
   display: none;
-}
-
-@media (max-width: 1250px) {
-  .modal-content {
-    width: 90vw;
-    height: 80%;
-  }
 }

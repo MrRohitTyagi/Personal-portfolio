@@ -21,18 +21,16 @@ function Chatbot() {
 
   return (
     <div>
-      <motion.div id="chatbot-container">
-        <motion.img
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-          src={chatbotimg}
-          alt="Chatbot"
-          height="1"
-          id="chatbot-img"
-          onClick={handleImageClick}
-        />
-      </motion.div>
+      <motion.img
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+        src={chatbotimg}
+        alt="Chatbot"
+        height="1"
+        id="chatbot-img"
+        onClick={handleImageClick}
+      />
 
       {showModal && (
         <motion.div
@@ -40,7 +38,6 @@ function Chatbot() {
           animate={{ x: 0 }}
           transition={{ duration: 0.5 }}
           id="chatbot-modal"
-          className="modal"
         >
           <span className="close" onClick={closeModal}>
             &times;
