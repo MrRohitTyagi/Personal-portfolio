@@ -15,8 +15,10 @@ function Chatbot() {
     setShowModal(false);
   };
 
-  const handleImageClick = () => {
+  const handleImageClick = (e) => {
     openModal();
+    e.stopPropagation();
+    e.preventDefault();
   };
 
   return (
