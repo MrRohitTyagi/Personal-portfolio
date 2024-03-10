@@ -13,7 +13,6 @@ const CoverEffect = ({ children }) => {
     });
   }, []);
 
-  
   const options = useMemo(() => {
     return {
       fullScreen: false,
@@ -49,7 +48,7 @@ const CoverEffect = ({ children }) => {
         detectsOn: "window",
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onDiv: {
@@ -59,7 +58,7 @@ const CoverEffect = ({ children }) => {
             type: "circle",
           },
           onHover: {
-            enable: true,
+            enable: false,
             mode: "repulse",
             parallax: {
               enable: true,
@@ -68,7 +67,7 @@ const CoverEffect = ({ children }) => {
             },
           },
           resize: {
-            delay: 0.5,
+            delay: 0.3,
             enable: true,
           },
         },
