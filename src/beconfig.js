@@ -9,6 +9,7 @@ import materialUI from "assets/icons8-material-ui-800.svg";
 import css from "assets/css.svg";
 import html from "assets/html.svg";
 import javascript from "assets/javascript.svg";
+import typescript from "assets/typescript.svg";
 import mongo from "assets/mongo.svg";
 import python from "assets/python.svg";
 import react from "assets/react.svg";
@@ -80,6 +81,7 @@ export const BECONFIG = {
       skills: [
         { name: "React", image: react },
         { name: "Javascript", image: javascript },
+        { name: "Typescript", image: typescript },
         { name: "Redux", image: redux },
         { name: "Css", image: css },
         { name: "Html", image: html },
