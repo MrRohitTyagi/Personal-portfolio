@@ -13,6 +13,7 @@ import typescript from "assets/typescript.svg";
 import mongo from "assets/mongo.svg";
 import python from "assets/python.svg";
 import react from "assets/react.svg";
+import nextjs from "assets/nextjs-icon-svgrepo-com.svg";
 import redux from "assets/redux.svg";
 import express from "assets/express-js.svg";
 import framer from "assets/framer.svg";
@@ -79,6 +80,7 @@ export const BECONFIG = {
     {
       heading: "Frontend Skills",
       skills: [
+        { name: "Next", image: nextjs },
         { name: "React", image: react },
         { name: "Javascript", image: javascript },
         { name: "Typescript", image: typescript },
