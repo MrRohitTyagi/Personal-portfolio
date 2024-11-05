@@ -65,9 +65,9 @@ export const BECONFIG = {
     },
   ],
   aboutMe: {
-    tagLine: `i'm a MERN stack developer`,
+    tagLine: `i'm a Full stack developer`,
     name: "Rohit Tyagi",
-    summery: `MERN Stack Developer with 1.5 year of experience in designing and
+    summery: `MERN Stack Developer with 2 year of experience in designing and
     maintaining web applications. Proficient in MongoDB, Express.js,
     React.js, and Node.js. Skilled in front-end and back-end
     development, RESTful API integration, and database management.
