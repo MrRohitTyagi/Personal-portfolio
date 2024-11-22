@@ -47,7 +47,24 @@ import monday2 from "assets/mondayBoard/monday2.png";
 import monday3 from "assets/mondayBoard/monday3.png";
 import monday4 from "assets/mondayBoard/monday4.png";
 
+import { calculateYearsAndMonths } from "utils";
+
+const { monthsDifference, yearsDifference } =
+  calculateYearsAndMonths("10/2022");
+
 export const BECONFIG = {
+  aboutMe: {
+    tagLine: "I'm a Full-Stack Developer",
+    name: "Rohit Tyagi",
+    summery: ` I am a software engineer with with ${yearsDifference} years and ${
+      monthsDifference > 0 ? `${monthsDifference} months` : ""
+    } of professional experience. 
+I have a solid foundation in building scalable web
+applications using React.js and Next.js. Proficient in MongoDB, Express, Redis, Prisma, and Node, I have successfully
+contributed to various projects by implementing features, resolving issues, optimizing performance, and collaborating with
+cross-functional teams for high-quality product delivery`,
+    profile: profile,
+  },
   featureBox: [
     {
       image: speed,
@@ -71,14 +88,7 @@ export const BECONFIG = {
       description: "Transforming ideas into dynamic and interactive web pages.",
     },
   ],
-  aboutMe: {
-    tagLine: "I'm a Full-Stack Developer",
-    name: "Rohit Tyagi",
-    summery: `I am a skilled software engineer with 2 years of professional experience. 
-    Specializing in developing scalable web applications with React.js and Next.js, I excel in utilizing MongoDB, Express, Redis, Prisma, and Node.js. 
-    I have contributed significantly to various projects by implementing innovative features and improving functionality.`,
-    profile: profile,
-  },
+
   skillsSection: [
     {
       heading: "Frontend Skills",
