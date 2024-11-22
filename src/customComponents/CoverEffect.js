@@ -43,137 +43,10 @@ const CoverEffect = ({ children }) => {
 
       detectRetina: true,
       duration: 0,
-      fpsLimit: 200,
-      interactivity: {
-        detectsOn: "window",
-        events: {
-          onClick: {
-            enable: false,
-            mode: "push",
-          },
-          onDiv: {
-            selectors: [],
-            enable: false,
-            mode: [],
-            type: "circle",
-          },
-          onHover: {
-            enable: false,
-            mode: "repulse",
-            parallax: {
-              enable: true,
-              force: 40,
-              smooth: 1,
-            },
-          },
-          resize: {
-            delay: 0.3,
-            enable: true,
-          },
-        },
-        modes: {
-          trail: {
-            delay: 1,
-            pauseOnStop: false,
-            quantity: 1,
-          },
-          attract: {
-            distance: 200,
-            duration: 0.4,
-            easing: "ease-out-quad",
-            factor: 1,
-            maxSpeed: 50,
-            speed: 1,
-          },
-          bounce: {
-            distance: 200,
-          },
-          bubble: {
-            distance: 200,
-            duration: 0.4,
-            mix: false,
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              mix: false,
-              selectors: [],
-            },
-          },
-          connect: {
-            distance: 80,
-            links: {
-              opacity: 0.5,
-            },
-            radius: 20,
-          },
-          grab: {
-            distance: 100,
-            links: {
-              blink: false,
-              consent: false,
-              opacity: 1,
-            },
-          },
-          push: {
-            default: true,
-            groups: [],
-            quantity: 4,
-          },
-          remove: {
-            quantity: 2,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-            factor: 100,
-            speed: 1,
-            maxSpeed: 50,
-            easing: "ease-out-quad",
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              factor: 100,
-              speed: 1,
-              maxSpeed: 50,
-              easing: "ease-out-quad",
-              selectors: [],
-            },
-          },
-          slow: {
-            factor: 3,
-            radius: 10,
-          },
-          light: {
-            area: {
-              gradient: {
-                start: {
-                  value: "#ffffff",
-                },
-                stop: {
-                  value: "#000000",
-                },
-              },
-              radius: 100,
-            },
-            shadow: {
-              color: {
-                value: "#000000",
-              },
-              length: 2000,
-            },
-          },
-        },
-      },
+      fpsLimit: 60,
+
       manualParticles: [],
       particles: {
-        bounce: {
-          horizontal: {
-            value: 1,
-          },
-          vertical: {
-            value: 1,
-          },
-        },
         collisions: {
           absorb: {
             speed: 2,
@@ -187,12 +60,8 @@ const CoverEffect = ({ children }) => {
             },
           },
           enable: false,
-          maxSpeed: 50,
+          maxSpeed: 10,
           mode: "bounce",
-          overlap: {
-            enable: true,
-            retries: 0,
-          },
         },
         color: {
           value: "#ff0000",
@@ -209,7 +78,7 @@ const CoverEffect = ({ children }) => {
             s: {
               count: 0,
               enable: false,
-              speed: 1,
+              speed: 20,
               decay: 0,
               delay: 0,
               sync: true,
@@ -218,7 +87,7 @@ const CoverEffect = ({ children }) => {
             l: {
               count: 0,
               enable: false,
-              speed: 1,
+              speed: 20,
               decay: 0,
               delay: 0,
               sync: true,
@@ -246,53 +115,12 @@ const CoverEffect = ({ children }) => {
               y: 3000,
             },
           },
-          center: {
-            x: 50,
-            y: 50,
-            mode: "percent",
-            radius: 0,
-          },
-          decay: 0,
-          distance: {},
-          direction: "none",
-          drift: 0,
+
           enable: true,
-          gravity: {
-            acceleration: 9.81,
-            enable: false,
-            inverse: false,
-            maxSpeed: 50,
-          },
-          path: {
-            clamp: true,
-            delay: {
-              value: 0,
-            },
-            enable: false,
-            options: {},
-          },
-          outModes: {
-            default: "out",
-            bottom: "out",
-            left: "out",
-            right: "out",
-            top: "out",
-          },
+
           random: false,
           size: false,
-          speed: 6,
-          spin: {
-            acceleration: 0,
-            enable: false,
-          },
-          straight: false,
-          trail: {
-            enable: false,
-            length: 10,
-            fill: {},
-          },
-          vibrate: false,
-          warp: false,
+          speed: 1,
         },
         number: {
           density: {
@@ -382,88 +210,7 @@ const CoverEffect = ({ children }) => {
             particles: {},
           },
         },
-        roll: {
-          darken: {
-            enable: false,
-            value: 0,
-          },
-          enable: false,
-          enlighten: {
-            enable: false,
-            value: 0,
-          },
-          mode: "vertical",
-          speed: 25,
-        },
-        tilt: {
-          value: 0,
-          animation: {
-            enable: false,
-            speed: 0,
-            decay: 0,
-            sync: false,
-          },
-          direction: "clockwise",
-          enable: false,
-        },
-        twinkle: {
-          lines: {
-            enable: false,
-            frequency: 0.05,
-            opacity: 1,
-          },
-          particles: {
-            enable: false,
-            frequency: 0.05,
-            opacity: 1,
-          },
-        },
-        wobble: {
-          distance: 5,
-          enable: false,
-          speed: {
-            angle: 50,
-            move: 10,
-          },
-        },
-        life: {
-          count: 0,
-          delay: {
-            value: 0,
-            sync: false,
-          },
-          duration: {
-            value: 0,
-            sync: false,
-          },
-        },
-        rotate: {
-          value: 0,
-          animation: {
-            enable: false,
-            speed: 0,
-            decay: 0,
-            sync: false,
-          },
-          direction: "clockwise",
-          path: false,
-        },
-        orbit: {
-          animation: {
-            count: 0,
-            enable: false,
-            speed: 1,
-            decay: 0,
-            delay: 0,
-            sync: false,
-          },
-          enable: false,
-          opacity: 1,
-          rotation: {
-            value: 45,
-          },
-          width: 1,
-        },
+
         links: {
           blink: false,
           color: {
@@ -487,14 +234,6 @@ const CoverEffect = ({ children }) => {
           },
           width: 1,
           warp: false,
-        },
-        repulse: {
-          value: 0,
-          enabled: false,
-          distance: 1,
-          duration: 1,
-          factor: 1,
-          speed: 1,
         },
       },
       pauseOnBlur: true,

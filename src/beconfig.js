@@ -21,6 +21,9 @@ import tailwind from "assets/tailwind.svg";
 import jwt from "assets/jwt.svg";
 import postgres from "assets/postgres.svg";
 import sql from "assets/sql.svg";
+import ec2 from "assets/ec2.svg";
+import s3 from "assets/s3.svg";
+import dynamoDB from "assets/dynamoDb.svg";
 
 import granitestack1 from "assets/granitestack/1111.png";
 import granitestack2 from "assets/granitestack/aipromter.png";
@@ -39,68 +42,76 @@ import workspaces2 from "assets/workspaces/login.png";
 import workspaces3 from "assets/workspaces/new mail.png";
 import workspaces4 from "assets/workspaces/open.png";
 
+import monday1 from "assets/mondayBoard/monday1.png";
+import monday2 from "assets/mondayBoard/monday2.png";
+import monday3 from "assets/mondayBoard/monday3.png";
+import monday4 from "assets/mondayBoard/monday4.png";
+
 export const BECONFIG = {
   featureBox: [
     {
       image: speed,
       heading: "Fast",
       description:
-        " Fast load times and lag free interaction, my highest priority.",
+        "Prioritizing fast load times and smooth, lag-free interactions.",
     },
     {
       image: devices,
       heading: "Responsive",
-      description: "My layouts will work on any device, big or small.",
+      description: "Optimized layouts for all devices, big or small.",
     },
     {
       image: bulb,
       heading: "Intuitive",
-      description: "Strong preference for easy to use, intuitive UX/UI.",
+      description: "Emphasis on intuitive and user-friendly UX/UI designs.",
     },
     {
       image: rocket,
       heading: "Dynamic",
-      description:
-        " I love bringing websites to life with dynamic, animated pages.",
+      description: "Transforming ideas into dynamic and interactive web pages.",
     },
   ],
   aboutMe: {
-    tagLine: `i'm a Full stack developer`,
+    tagLine: "I'm a Full-Stack Developer",
     name: "Rohit Tyagi",
-    summery: `MERN Stack Developer with 2 year of experience in designing and
-    maintaining web applications. Proficient in MongoDB, Express.js,
-    React.js, and Node.js. Skilled in front-end and back-end
-    development, RESTful API integration, and database management.
-    Strong troubleshooter and optimizer, committed to staying updated on
-    the latest technologies. Passionate about delivering cutting-edge
-    solutions and continuous learning.`,
+    summery: `I am a skilled software engineer with 2 years of professional experience. 
+    Specializing in developing scalable web applications with React.js and Next.js, I excel in utilizing MongoDB, Express, Redis, Prisma, and Node.js. 
+    I have contributed significantly to various projects by implementing innovative features and improving functionality.`,
     profile: profile,
   },
   skillsSection: [
     {
       heading: "Frontend Skills",
       skills: [
-        { name: "Next", image: nextjs },
-        { name: "React", image: react },
-        { name: "Javascript", image: javascript },
-        { name: "Typescript", image: typescript },
+        { name: "Next.js", image: nextjs },
+        { name: "React.js", image: react },
+        { name: "JavaScript", image: javascript },
+        { name: "TypeScript", image: typescript },
         { name: "Redux", image: redux },
-        { name: "Css", image: css },
-        { name: "Html", image: html },
-        { name: "Material", image: materialUI },
-        { name: "Framer", image: framer },
-        { name: "Tailwind", image: tailwind },
+        { name: "CSS", image: css },
+        { name: "HTML", image: html },
+        { name: "Material-UI", image: materialUI },
+        { name: "Framer Motion", image: framer },
+        { name: "Tailwind CSS", image: tailwind },
       ],
     },
     {
       heading: "Backend Skills",
       skills: [
-        { name: "Node js", image: nodejs },
-        { name: "Express js", image: express },
-        { name: "Mongo DB", image: mongo },
+        { name: "Node.js", image: nodejs },
+        { name: "Express.js", image: express },
+        { name: "MongoDB", image: mongo },
         { name: "JWT", image: jwt },
-        { name: "PostgresQl", image: postgres },
+        { name: "PostgreSQL", image: postgres },
         { name: "SQL", image: sql },
+      ],
+    },
+    {
+      heading: "Amazon Web Services",
+      skills: [
+        { name: "S3", image: s3 },
+        { name: "DynamoDB", image: dynamoDB },
+        { name: "EC2", image: ec2 },
       ],
     },
     {
@@ -108,21 +119,17 @@ export const BECONFIG = {
       skills: [{ name: "Python", image: python }],
     },
   ],
+
   experienceSection: [
     {
       date: "10/2022 - Present",
-      position: "Associate Software Engineer",
-      companyName: "Thoughts2Binary Consulting & Solutions",
+      position: "Software Engineer",
+      companyName: "Thoughts2Binary Private Limited",
       role: [
-        `Spearheaded the development of the core product, contributing to
-        its enhanced functionality and user experience.`,
-        `Collaborated closely with UX/UI designers to transform design
-        mockups and wireframes into pixelperfect web interfaces,
-        utilizing React.js and other frontend libraries.`,
-        `Established seamless communication between frontend and backend
-        systems, ensuring data consistency and optimal user experiences.`,
-        `Utilized a tech stack including React.js, Redux, git, npm,
-        Javascript, grommet, and Amazon Web Services (AWS).`,
+        "•Contributed significantly to the development of the core product, playing a key role in enhancing its functionality and improving the user experience",
+        "Collaborated with UX/UI designers to translate wireframes into responsive web interfaces using React.js.",
+        "Integrated seamless communication between frontend and backend systems, ensuring data consistency.",
+        "Worked with a robust tech stack including React.js, Redux, AWS, and more.",
       ],
     },
     {
@@ -130,10 +137,8 @@ export const BECONFIG = {
       position: "Web Developer Intern",
       companyName: "Pepcoding Education Pvt Ltd.",
       role: [
-        `Assisted in troubleshooting, debugging code, and enhancing
-      website functionality.`,
-        `Gained practical experience with HTML, CSS, JavaScript, Node.js
-      and data structures.`,
+        "Assisted in debugging and optimizing website functionality.",
+        "Gained hands-on experience with HTML, CSS, JavaScript, Node.js, and data structures.",
       ],
     },
   ],
@@ -141,30 +146,37 @@ export const BECONFIG = {
     {
       src: "https://granitestack.com/",
       images: [granitestack1, granitestack2, granitestack3],
-      description: `GraniteStack enables effortless creation of Minimum Viable Products (MVPs) without code, enabling a low-cost approach to validate ideas while preparing for scale.`,
+      description: `GraniteStack empowers users to create Minimum Viable Products (MVPs) effortlessly, enabling cost-effective validation of ideas while preparing for scalability.`,
       title: `GraniteStack`,
-      tech: "React js",
+      tech: "React.js",
+    },
+    {
+      src: "https://www.mondayboard.online/",
+      images: [monday1, monday2, monday3, monday4],
+      description: `A comprehensive task management system enabling efficient task creation, updates, and deletion, with real-time notifications and updates via WebSockets for seamless team collaboration. It features secure user authentication with JWT and advanced filtering and search options for streamlined task managemen`,
+      title: `Mondayboard`,
+      tech: "Next.js / TypeScript / Node.js / MongoDB / and Mongoose / WebSockets",
     },
     {
       src: "https://workspaces-orcin.vercel.app/inbox",
       images: [workspaces1, workspaces2, workspaces3, workspaces4],
-      description: `Workspace is a sleek application that mirrors Gmail's efficiency, catering to seamless communication and collaboration. Developed with React, Node , Express & mongo DB, it offers an intuitive email system akin to Gmail. Its user-friendly design ensures easy email management makes Workspace a versatile platform for streamlined communication and productive teamwork.`,
+      description: `Workspaces is a modern communication platform inspired by Gmail. Built with React, Node.js, Express, and MongoDB, it ensures efficient email management with an intuitive user interface for seamless communication.`,
       title: `Workspaces`,
-      tech: "React js / Node / Express / Mongo DB      ",
+      tech: "React.js / Node.js / Express / MongoDB",
     },
     {
       src: "https://www.traveloris.com/",
       images: [img1, img2, img3],
-      description: `Traveloris is the smartest way to plan your trip. Our attractions have been carefully selected with the help of local explorer. Simply select what you want to see and let traveloris build your personalised itinerary.`,
-      title: `Travel oris`,
-      tech: "React js",
+      description: `Traveloris simplifies trip planning with expertly curated attractions and personalized itineraries, helping users maximize their travel experiences.`,
+      title: `Traveloris`,
+      tech: "React.js",
     },
     {
       src: "https://thoughts2-cart-com.vercel.app/",
       images: [t2c1, t2c2, t2c3],
-      description: `Developed an intuitive e-commerce site with user authentication, an admin portal for product management, Stripe integration for secure payments, and an invoicing system with email delivery. Proficient in React, HTML, CSS, JavaScript, Node.js, Express.js, and MongoDB. Achieved a seamless shopping experience with a focus on efficient product management.`,
+      description: `An e-commerce platform with user authentication, an admin portal for product management, secure payment integration via Stripe, and automated invoicing. Developed with React.js, Node.js, Express.js, and MongoDB, the platform provides a seamless shopping experience.`,
       title: `Thoughts2Cart.com`,
-      tech: "React js / Node / Express / Mongo DB",
+      tech: "React.js / Node.js / Express.js / MongoDB",
     },
   ],
 };

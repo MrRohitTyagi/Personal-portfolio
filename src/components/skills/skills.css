@@ -42,7 +42,7 @@
   gap: 30px;
 }
 .divider {
-  height: 600px;
+  /* height: 600px; */
   width: 3px;
   background-color: #23c3c9;
 }
@@ -66,6 +66,7 @@
   border: 2px solid #23c3c9;
   border-radius: 10%;
   min-width: 150px;
+  box-shadow: 4px 3px 13px #23c3c9;
   /* transition: 300ms; */
 }
 .skill-box:hover {
@@ -103,6 +104,9 @@
   margin-top: 10px;
   padding-left: 20px;
   font-size: 19px;
+}
+.role-in-company li {
+  margin-bottom: 0.5em;
 }
 
 @media (max-width: 1250px) {
