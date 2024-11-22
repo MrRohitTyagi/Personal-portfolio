@@ -9,8 +9,6 @@ const Navbar = () => {
 
   return (
     <motion.div
-      animate={{ y: 0 }}
-      initial={{ y:-50 }}
       style={{
         background: navbarBgColor,
         borderBottom: `2px solid ${skillsColor} `,
