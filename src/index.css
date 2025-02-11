@@ -124,3 +124,6 @@ i {
 *::-webkit-scrollbar {
   display: none;
 }
+.bold-text {
+  font-weight: bolder;
+}

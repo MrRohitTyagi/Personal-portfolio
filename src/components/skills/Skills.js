@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import "./skills.css";
 import { ConfigContext, ThemeContext } from "App";
+import RenderBoldText from "customComponents/RenderBoldText";
 
 const skillsHeadingVarient = {
   hidden: { x: "-1000px" },
@@ -127,7 +128,7 @@ const Skills = () => {
                     <h2 className="company-name">{exp.companyName}</h2>
                     <ul className="role-in-company">
                       {exp.role.map((role, i) => {
-                        return <li key={i}>{role}</li>;
+                        return <RenderBoldText text={role} key={i} />;
                       })}
                     </ul>
                   </div>

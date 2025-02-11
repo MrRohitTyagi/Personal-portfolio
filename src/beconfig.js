@@ -136,10 +136,13 @@ cross-functional teams for high-quality product delivery`,
       position: "Software Engineer",
       companyName: "Thoughts2Binary Private Limited",
       role: [
-        "Contributed significantly to the development of the core product, playing a key role in enhancing its functionality and improving the user experience",
-        "Collaborated with UX/UI designers to translate wireframe into responsive web interfaces using React.js.",
-        "Integrated seamless communication between frontend and backend systems, ensuring data consistency.",
-        "Worked with a robust tech stack including React.js, Redux, AWS, and more.",
+        `Contributed significantly to the development of the **core product**, playing a key role in enhancing its functionality, user interface and user experience.`,
+
+        `**Mentored** 2 new/junior team members, fostering a collaborative environment that improved **code quality** and adherence to **best practices**`,
+
+        `Coordinated with UX/UI designers to transform design mock-ups and wireframes into **pixel-perfect** web interfaces, utilizing React.js and other frontend libraries.`,
+
+        `I supported peers during urgent deployments and **tight deadlines** and **collaborated** closely with backend and infrastructure team members to align on **project timelines** and ensure smooth, **timely delivery**.`,
       ],
     },
     {
@@ -147,8 +150,8 @@ cross-functional teams for high-quality product delivery`,
       position: "Web Developer Intern",
       companyName: "Pepcoding Education Pvt Ltd.",
       role: [
-        "Assisted in debugging and optimizing website functionality.",
-        "Gained hands-on experience with HTML, CSS, JavaScript, Node.js, and data structures.",
+        "Assisted in debugging and **optimizing** website functionality.",
+        "Gained hands-on experience with HTML, CSS, JavaScript, Node.js, and **data structures**.",
       ],
     },
   ],
