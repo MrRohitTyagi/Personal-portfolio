@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./home.css";
 import { ConfigContext } from "App";
 import { scrollToSection } from "utils";
-import TypingEffect from "customComponents/TypingEffect";
+import TypingEffect from "customComponents/TypingAnimation";
 
 const HomeSection = () => {
   const { aboutMe } = useContext(ConfigContext);
