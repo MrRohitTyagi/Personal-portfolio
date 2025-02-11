@@ -56,7 +56,7 @@ export const BECONFIG = {
   aboutMe: {
     tagLine: "I'm a Full-Stack Developer",
     name: "Rohit Tyagi",
-    summery: ` I am a software engineer with with ${yearsDifference} years and ${
+    summery: `I am a software engineer with with ${yearsDifference} years and ${
       monthsDifference > 0 ? `${monthsDifference} months` : ""
     } of professional experience. 
 I have a solid foundation in building scalable web

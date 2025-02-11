@@ -11,11 +11,9 @@ import InsagramSvg from "assets/insagram.svg";
 import LinkedlnSvg from "assets/Linkedln.svg";
 import GithubSvg from "assets/Github.svg";
 import WhatsappSvg from "assets/Whatsapp.svg";
-import TypingEffect from "customComponents/typingeffect";
-const headingVariants = {
-  hidden: { x: "-1100px" },
-  visible: { x: 0 },
-};
+import TypingEffect from "customComponents/Typingeffect";
+import { headingVariants } from "constants";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",

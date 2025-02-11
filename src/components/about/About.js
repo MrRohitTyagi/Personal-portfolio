@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 
 import "./about.css";
 import { ConfigContext, ThemeContext } from "App";
-
+import { headingVariants } from "constants";
 
 const featureVariants = {
   hidden: {
@@ -19,10 +19,6 @@ const featureVariants = {
       rotate: { duration: 0.5 },
     },
   },
-};
-const variants = {
-  hidden: { x: "-1100px" },
-  visible: { x: 0 },
 };
 
 const About = () => {
@@ -67,7 +63,7 @@ const About = () => {
           <motion.div
             initial="hidden"
             animate={controls}
-            variants={variants}
+            variants={headingVariants}
             className="border-bottom-text"
           >
             About

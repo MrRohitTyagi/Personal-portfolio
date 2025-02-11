@@ -7,11 +7,8 @@ import useIntersectionObserver from "utils/useIntersectionObserver";
 import "./projects.css";
 import ImageCrosole from "customComponents/ImageCrosole";
 import { useInView } from "react-intersection-observer";
+import { headingVariants } from "constants";
 
-const headingVariants = {
-  hidden: { x: "-1100px" },
-  visible: { x: 0 },
-};
 const Projects = () => {
   const { control, ref } = useIntersectionObserver();
   const { skillsBgColor, lightTextColor } = useContext(ThemeContext);

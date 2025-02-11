@@ -5,11 +5,8 @@ import { useInView } from "react-intersection-observer";
 import "./skills.css";
 import { ConfigContext, ThemeContext } from "App";
 import RenderBoldText from "customComponents/RenderBoldText";
+import { headingVariants } from "constants";
 
-const skillsHeadingVarient = {
-  hidden: { x: "-1000px" },
-  visible: { x: 0 },
-};
 const skillsVarient = {
   hidden: {
     scale: [0],
@@ -53,6 +50,7 @@ const Skills = () => {
   const { ref: skillsRef, inView: skillsInView } = useInView({
     triggerOnce: true,
   });
+
   return (
     <div
       ref={skillsHeadingRef}
@@ -61,7 +59,7 @@ const Skills = () => {
       style={{ background: skillsBgColor, color: lightTextColor }}
     >
       <motion.div
-        variants={skillsHeadingVarient}
+        variants={headingVariants}
         animate={skillScontrol}
         initial="hidden"
         className="section-heading-skills full-w align-c"
