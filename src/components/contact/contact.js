@@ -11,7 +11,7 @@ import InsagramSvg from "assets/insagram.svg";
 import LinkedlnSvg from "assets/Linkedln.svg";
 import GithubSvg from "assets/Github.svg";
 import WhatsappSvg from "assets/Whatsapp.svg";
-import TypingEffect from "customComponents/Typingeffect";
+import TypingEffect from "customComponents/TypingEffect";
 import { headingVariants } from "constants";
 
 const Contact = () => {
