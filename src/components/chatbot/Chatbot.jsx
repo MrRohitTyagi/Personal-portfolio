@@ -5,11 +5,10 @@ import { motion } from "framer-motion";
 
 function Chatbot() {
   const [showModal, setShowModal] = useState(false);
-  const [iframeloading, setiframeloading] = useState(true);
+  const [iframeloading, setIframeloading] = useState(true);
   const openModal = () => {
     setShowModal(true);
   };
-  console.log("iframeloading", iframeloading);
 
   const closeModal = () => {
     setShowModal(false);
@@ -52,13 +51,10 @@ function Chatbot() {
           <iframe
             id="iframe-chat"
             title="chatbot"
-            // src=" http://localhost:3000"
             src="https://gemini-chatbot-fe.vercel.app/"
             frameborder="0"
             height="600px"
-            onLoad={() => {
-              setiframeloading(false);
-            }}
+            onLoad={() => setIframeloading(false)}
             width="500px"
           />
         </motion.div>

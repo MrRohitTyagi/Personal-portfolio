@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
+import "./coverEffect.css";
+
 const CoverEffect = ({ children }) => {
   const [init, setInit] = useState(false);
 
@@ -255,15 +257,11 @@ const CoverEffect = ({ children }) => {
   }, []);
   if (init) {
     return (
-      <>
-        <Particles
-          id="tsparticles"
-          // particlesLoaded={particlesLoaded}
-          options={options}
-        />
-
+      <div className="ts-particle-cont">
+        <Particles id="tsparticles" options={options} />
         {children}
-      </>
+        <div className="black-line" />
+      </div>
     );
   }
 

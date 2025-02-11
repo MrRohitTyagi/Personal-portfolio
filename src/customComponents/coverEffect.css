@@ -1,0 +1,10 @@
+.ts-particle-cont {
+  position: relative;
+}
+.black-line {
+  position: absolute;
+  width: 100vw;
+  height: 2rem;
+  background: black;
+  top: 98%;
+}
