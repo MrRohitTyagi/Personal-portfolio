@@ -137,7 +137,7 @@ cross-functional teams for high-quality product delivery`,
       companyName: "Thoughts2Binary Private Limited",
       role: [
         "Contributed significantly to the development of the core product, playing a key role in enhancing its functionality and improving the user experience",
-        "Collaborated with UX/UI designers to translate wireframes into responsive web interfaces using React.js.",
+        "Collaborated with UX/UI designers to translate wireframe into responsive web interfaces using React.js.",
         "Integrated seamless communication between frontend and backend systems, ensuring data consistency.",
         "Worked with a robust tech stack including React.js, Redux, AWS, and more.",
       ],

@@ -5,7 +5,9 @@
   width: 600px;
   height: 90vh;
   z-index: 9999;
-  border: 1px solid rgba(245, 245, 245, 0.658);
+  border: 2px solid rgba(245, 245, 245, 0.658);
+  border-radius: 10px 0 0 0;
+  overflow: hidden;
 }
 #iframe-chat {
   height: 100%;

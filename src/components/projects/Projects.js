@@ -47,6 +47,7 @@ const Projects = () => {
           {projectsSection?.map((project) => {
             return (
               <ImageCrosole
+                key={project.title}
                 src={project.src}
                 images={project.images}
                 desc={project.description}
