@@ -1,27 +1,33 @@
-import rocket from "assets/rocket.svg";
-import devices from "assets/devices.svg";
-import bulb from "assets/bulb.svg";
-import speed from "assets/speed.svg";
+import rocket from "assets/svg/rocket.svg";
+import devices from "assets/svg/devices.svg";
+import bulb from "assets/svg/bulb.svg";
+import speed from "assets/svg/speed.svg";
 import profile from "assets/my.png";
 
-import nodejs from "assets/nodejs.svg";
-import materialUI from "assets/icons8-material-ui-800.svg";
-import css from "assets/css.svg";
-import html from "assets/html.svg";
-import javascript from "assets/javascript.svg";
-import typescript from "assets/typescript.svg";
-import mongo from "assets/mongo.svg";
-import python from "assets/python.svg";
-import react from "assets/react.svg";
-import nextjs from "assets/nextjs-icon-svgrepo-com.svg";
-import redux from "assets/redux.svg";
-import express from "assets/express-js.svg";
-import framer from "assets/framer.svg";
-import tailwind from "assets/tailwind.svg";
-import jwt from "assets/jwt.svg";
-import ec2 from "assets/ec2.svg";
-import s3 from "assets/s3.svg";
-import dynamoDB from "assets/dynamoDb.svg";
+import nodejs from "assets/svg/nodejs.svg";
+import materialUI from "assets/svg/icons8-material-ui-800.svg";
+import css from "assets/svg/css.svg";
+import html from "assets/svg/html.svg";
+import javascript from "assets/svg/javascript.svg";
+import typescript from "assets/svg/typescript.svg";
+import mongo from "assets/svg/mongo.svg";
+import python from "assets/svg/python.svg";
+import react from "assets/svg/react.svg";
+import nextjs from "assets/svg/nextjs-icon-svgrepo-com.svg";
+import redux from "assets/svg/redux.svg";
+import express from "assets/svg/express-js.svg";
+import framer from "assets/svg/framer.svg";
+import tailwind from "assets/svg/tailwind.svg";
+import jwt from "assets/svg/jwt.svg";
+import ec2 from "assets/svg/ec2.svg";
+import s3 from "assets/svg/s3.svg";
+import dynamoDB from "assets/svg/dynamoDb.svg";
+import d3 from "assets/svg/d3.svg";
+import storybook from "assets/svg/storybook.svg";
+import tanstack from "assets/svg/tanstack.svg";
+import reactflow from "assets/svg/reactflow.svg";
+import redis from "assets/svg/redis.svg";
+import socket from "assets/svg/socket.svg";
 
 import granitestack1 from "assets/granitestack/1111.png";
 import granitestack2 from "assets/granitestack/aipromter.png";
@@ -71,24 +77,27 @@ export const BECONFIG = {
   featureBox: [
     {
       image: speed,
-      heading: "Fast",
+      heading: "Performance",
       description:
-        "Prioritizing fast load times and smooth, lag-free interactions.",
+        "Architecting high-performance applications through strategic optimization, benchmarking, and runtime profiling to achieve sub-2s TTI on complex enterprise dashboards.",
     },
     {
       image: devices,
-      heading: "Responsive",
-      description: "Optimized layouts for all devices, big or small.",
+      heading: "Adaptability",
+      description:
+        "Building responsive systems that scale seamlessly across devices using modern CSS patterns while maintaining WCAG 2.1 AA accessibility standards.",
     },
     {
       image: bulb,
-      heading: "Intuitive",
-      description: "Emphasis on intuitive and user-friendly UX/UI designs.",
+      heading: "Craftsmanship",
+      description:
+        "Creating intuitive user experiences through data-driven design, reusable component libraries, and accessibility-first development reducing implementation friction by 40%+.",
     },
     {
       image: rocket,
-      heading: "Dynamic",
-      description: "Transforming ideas into dynamic and interactive web pages.",
+      heading: "Innovation",
+      description:
+        "Driving technical innovation by evaluating emerging technologies, architecting scalable solutions, and leading proof-of-concepts that bridge business needs with technical feasibility.",
     },
   ],
 
@@ -106,10 +115,10 @@ export const BECONFIG = {
         { name: "HTML", image: html },
         { name: "Redux", image: redux },
         { name: "Tailwind CSS", image: tailwind },
-        { name: "Storybook", image: react }, // Using react image as placeholder
-        { name: "D3.js", image: javascript }, // Using javascript image as placeholder
-        { name: "TanStack Table", image: javascript }, // Using javascript image as placeholder
-        { name: "ReactFlow", image: react }, // Using react image as placeholder
+        { name: "D3", image: d3 },
+        { name: "Storybook", image: storybook }, // Using react image as placeholder
+        { name: "TanStack Table", image: tanstack }, // Using javascript image as placeholder
+        { name: "ReactFlow", image: reactflow }, // Using react image as placeholder
       ],
     },
     {
@@ -119,8 +128,8 @@ export const BECONFIG = {
         { name: "Express.js", image: express },
         { name: "MongoDB", image: mongo },
         { name: "Mongoose", image: mongo },
-        { name: "Redis", image: nodejs }, // Using nodejs image as placeholder
-        { name: "Socket.io", image: nodejs },
+        { name: "Redis", image: redis }, // Using nodejs image as placeholder
+        { name: "Socket.io", image: socket },
         { name: "WebSockets", image: nodejs }, // Using nodejs image as placeholder
         { name: "JWT", image: jwt },
       ],
@@ -150,9 +159,9 @@ export const BECONFIG = {
     {
       heading: "Other",
       skills: [
-        { name: "Performance Optimization", image: javascript }, // Using javascript image as placeholder
-        { name: "AI-Assisted Development", image: javascript }, // Using javascript image as placeholder
-        { name: "Agentic Tooling", image: javascript }, // Using javascript image as placeholder
+        { name: "Performance Optimization", image: speed }, // Using speed image for Performance Optimization
+        { name: "AI-Assisted Development", image: bulb }, // Using bulb image for AI-Assisted Development
+        { name: "Agentic Tooling", image: javascript }, // Using javascript image as placeholder for Agentic Tooling
         { name: "Python", image: python },
       ],
     },
