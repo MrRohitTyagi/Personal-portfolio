@@ -310,14 +310,17 @@ const About = () => {
                 className="flex flex-wrap gap-4 mt-8"
                 variants={itemVariants}
               >
-                <motion.button
-                  className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white font-semibold overflow-hidden shadow-lg"
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="Rohit_Tyagi_Resume.pdf"
+                  className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white font-semibold overflow-hidden shadow-lg inline-block"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: "0 20px 40px -12px rgba(59, 130, 246, 0.4)"
                   }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open('/resume.pdf', '_blank')}
                 >
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600"
@@ -329,7 +332,7 @@ const About = () => {
                     <Download className="w-4 h-4" />
                     Download Resume
                   </span>
-                </motion.button>
+                </a>
 
                 <motion.button
                   className="group px-6 py-3 glass-button font-semibold flex items-center gap-2 hover:bg-white/20"

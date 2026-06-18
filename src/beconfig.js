@@ -52,22 +52,21 @@ const { monthsDifference, yearsDifference } =
 
 export const BECONFIG = {
   aboutMe: {
-    tagLine: "I'm a Full-Stack Developer & Design System Engineer",
+    tagLine: "Full-Stack Developer specializing in scalable systems",
     name: "Rohit Tyagi",
     summery: `I am a software engineer with ${yearsDifference} years and ${
       monthsDifference > 0 ? `${monthsDifference} months` : ""
-    } of professional experience currently working at **Brevo** as a Design System Engineer.
-I specialize in building **robust and scalable components** used by developers across multiple products. With expertise in React.js, Next.js, TypeScript, Node.js, and AWS, I have successfully contributed to various projects by implementing features, mentoring team members, and delivering high-quality solutions that reduce development time and improve user experience.`,
+    } of professional experience. I specialize in building scalable frontend and backend systems, with expertise in React, Next.js, TypeScript, Node.js, and AWS. I have a proven track record of delivering high-performance solutions, mentoring team members, and driving technical excellence across products.`,
     profile: profile,
     email: "tyagi4366@gmail.com",
     phone: "+91 9760147296",
     location: "Bareilly, Uttar Pradesh, India",
-    age: 25,
+    age: 26,
     dateOfBirth: "11-10-1999",
     currentPosition: "Software Engineer",
-    workMode: "Hybrid",
-    noticePeriod: "60 days",
-    hobbies: ["Playing Snooker", "Coding", "Problem Solving"]
+    workMode: "Onsite",
+    noticePeriod: "Immediate",
+    hobbies: ["Playing Snooker", "Coding", "Problem Solving", "Reading"],
   },
   featureBox: [
     {
@@ -95,51 +94,65 @@ I specialize in building **robust and scalable components** used by developers a
 
   skillsSection: [
     {
-      heading: "Frontend Skills",
+      heading: "Frontend",
       skills: [
+        { name: "React", image: react },
         { name: "Next.js", image: nextjs },
-        { name: "React.js", image: react },
-        { name: "JavaScript", image: javascript },
         { name: "TypeScript", image: typescript },
-        { name: "Redux", image: redux },
+        { name: "JavaScript", image: javascript },
+        { name: "Framer Motion", image: framer },
+        { name: "Material-UI", image: materialUI },
         { name: "CSS", image: css },
         { name: "HTML", image: html },
+        { name: "Redux", image: redux },
         { name: "Tailwind CSS", image: tailwind },
-        { name: "Material-UI", image: materialUI },
-        { name: "Framer Motion", image: framer },
+        { name: "Storybook", image: react }, // Using react image as placeholder
+        { name: "D3.js", image: javascript }, // Using javascript image as placeholder
+        { name: "TanStack Table", image: javascript }, // Using javascript image as placeholder
+        { name: "ReactFlow", image: react }, // Using react image as placeholder
       ],
     },
     {
-      heading: "Backend Skills",
+      heading: "Backend",
       skills: [
         { name: "Node.js", image: nodejs },
         { name: "Express.js", image: express },
         { name: "MongoDB", image: mongo },
         { name: "Mongoose", image: mongo },
-        { name: "JWT", image: jwt },
+        { name: "Redis", image: nodejs }, // Using nodejs image as placeholder
         { name: "Socket.io", image: nodejs },
+        { name: "WebSockets", image: nodejs }, // Using nodejs image as placeholder
+        { name: "JWT", image: jwt },
       ],
     },
     {
-      heading: "DevOps & Tools",
+      heading: "Testing",
       skills: [
-        { name: "Docker", image: ec2 },
-        { name: "CI/CD", image: ec2 },
+        { name: "Playwright", image: javascript }, // Using javascript image as placeholder
         { name: "Jest", image: javascript },
+        { name: "React Testing Library", image: react }, // Using react image as placeholder
+        { name: "Visual Regression Testing", image: javascript }, // Using javascript image as placeholder
+        { name: "Accessibility Testing", image: javascript }, // Using javascript image as placeholder
       ],
     },
     {
-      heading: "Amazon Web Services",
+      heading: "DevOps",
       skills: [
+        { name: "AWS", image: ec2 }, // Using ec2 image as placeholder for AWS
         { name: "EC2", image: ec2 },
         { name: "S3", image: s3 },
         { name: "DynamoDB", image: dynamoDB },
+        { name: "Docker", image: ec2 }, // Using ec2 image as placeholder for Docker
+        { name: "CI/CD", image: ec2 }, // Using ec2 image as placeholder for CI/CD
+        { name: "GitHub Actions", image: javascript }, // Using javascript image as placeholder
       ],
     },
     {
-      heading: "Programming Languages",
+      heading: "Other",
       skills: [
-        { name: "Go-lang", image: python },
+        { name: "Performance Optimization", image: javascript }, // Using javascript image as placeholder
+        { name: "AI-Assisted Development", image: javascript }, // Using javascript image as placeholder
+        { name: "Agentic Tooling", image: javascript }, // Using javascript image as placeholder
         { name: "Python", image: python },
       ],
     },
@@ -147,37 +160,28 @@ I specialize in building **robust and scalable components** used by developers a
 
   experienceSection: [
     {
-      date: "03/2025 - Present",
+      date: "Mar 2025 – May 2026",
       position: "Software Engineer",
       companyName: "Brevo",
       role: [
-        `Part of the **Design System team**, responsible for building **robust and scalable components** that are used by developers across multiple products.`,
-
-        `Contributed to creating **reusable UI components** ensuring consistency and maintainability across different applications.`,
-
-        `Collaborated with **cross-functional teams** to enhance the developer experience and streamline product development.`,
+        "Built a scalable <strong> DataTable </strong> using <strong> TanStack Table + virtualization</strong>  for high-performance rendering of large datasets.",
+        "Developed Brevo's organization-wide charting library with <strong>D3.js</strong> and TypeScript; adopted by <strong>12+ </strong>teams.",
+        "Built <strong>AI Chat UI</strong> end-to-end, accelerating customer workflows and reducing reliance on traditional interfaces.",
+        "Architected <strong>Playwright-based E2E testing</strong> (accessibility, visual regression, <strong>CI integration</strong>).",
+        "Created an autonomous documentation agent that updates component docs and raises PRs automatically after merges.",
       ],
     },
     {
-      date: "10/2022 - 07/2025",
+      date: "Oct 2022 – Feb 2025",
       position: "Software Engineer",
-      companyName: "Thoughts2Binary Private Limited",
+      companyName: "Thoughts2Binary Pvt. Ltd.",
       role: [
-        `Contributed significantly to the development of the **core product**, playing a key role in enhancing its functionality, user interface and user experience.`,
-
-        `**Mentored** 2 new/junior team members, fostering a collaborative environment that improved **code quality** and adherence to **best practices**.`,
-
-        `Coordinated with **UX/UI designers** to transform design mock-ups and wireframes into **pixel-perfect** web interfaces, utilizing React.js and other frontend libraries.`,
-
-        `Supported peers during **urgent deployments** and tight deadlines and collaborated closely with backend and infrastructure team members to align on **project timelines** and ensure smooth, timely delivery.`,
-      ],
-    },
-    {
-      date: "11/2021 - 05/2022",
-      position: "Web Developer Intern",
-      companyName: "Pepcoding Education Pvt Ltd.",
-      role: [
-        "Assisted in **debugging, troubleshooting, and enhancing** web applications, gaining hands-on experience with HTML, CSS, JavaScript, Node.js, and **data structures**.",
+        "Contributed to GraniteStack SaaS platform, helping reduce business costs by 25%.",
+        "Built a schema-driven form engine using Formik and Yup, reducing development effort by 40%.",
+        "Improved application performance by 25% using React hooks, Redux, RxJS, and memoization.",
+        "Assisted in business scoping and research, helping acquire 3 clients.",
+        "Developed pixel-perfect React-based UIs from design mockups.",
+        "Mentored 2 junior developers and improved engineering practices.",
       ],
     },
   ],
@@ -240,23 +244,24 @@ I specialize in building **robust and scalable components** used by developers a
       title: "Star Performer",
       company: "Thoughts2Binary Private Limited",
       date: "09/03/2024",
-      description: "Takes ownership of tasks, delivers high-quality results, ensures smooth performance, and solves complex problems with practical solutions."
-    }
+      description:
+        "Takes ownership of tasks, delivers high-quality results, ensures smooth performance, and solves complex problems with practical solutions.",
+    },
   ],
 
   // Education and Certifications
   education: {
-    degree: "Bachelor of Computer Application",
+    degree: "Bachelor of Computer Applications (BCA)",
     institution: "Invertis University",
     duration: "2018 – 2021",
-    location: "Bareilly, India"
+    location: "Bareilly, Uttar Pradesh, India",
   },
 
   certifications: [
     {
-      name: "Data structures and algorithms with Web development",
-      provider: "Pepcoding Education Private Limited",
-      year: "2022"
-    }
+      name: "Data Structures & Algorithms with Web Development",
+      provider: "Pepcoding Education Pvt. Ltd.",
+      year: "2022",
+    },
   ],
 };
